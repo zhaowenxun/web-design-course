@@ -1,0 +1,222 @@
+<!DOCTYPE HTML>
+<html lang="zh-cn">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>部门管理</title>
+
+		<link href="resources/plugins/bootstrap-3.3.0/css/bootstrap.min.css" rel="stylesheet" />
+		<link href="resources/plugins/material-design-iconic-font-2.2.0/css/material-design-iconic-font.min.css" rel="stylesheet" />
+		<link href="resources/plugins/bootstrap-table-1.11.0/bootstrap-table.min.css" rel="stylesheet" />
+		<link href="resources/plugins/waves-0.7.5/waves.min.css" rel="stylesheet" />
+		<link href="resources/plugins/jquery-confirm/jquery-confirm.min.css" rel="stylesheet" />
+		<link href="resources/plugins/select2/css/select2.min.css" rel="stylesheet" />
+		<script src="resources/plugins/select2/js/select2.min.js"></script>
+
+		<link href="resources/css/common.css" rel="stylesheet" />
+	</head>
+	<body>
+		<div id="main">
+			<div id="toolbar">
+				<a class="waves-effect waves-button" href="javascript:;" onclick="createAction()" style="font-size: 15px;"><i class="zmdi zmdi-close"></i>
+					员工离职</a>
+			</div>
+			<table id="table" style="text-align: center;"></table>
+		</div>
+		<!-- 新增 -->
+		<div id="createDialog" class="crudDialog" hidden>
+			<form>
+				<div class="form-group">
+					<label for="departureDate">离职日期</label>
+					<input id="departureDate" type="text" class="form-control">
+				</div>
+				<div >
+					<select name="highestDegree" id="highestDegree" class="form-control">
+						<option value="">(请选择离职类型)</option>
+						<option value="主动辞职">主动辞职</option>
+						<option value="辞退">辞退</option>
+						<option value="退休">退休</option>
+						<option value="开除">开除</option>
+						<option value="试用期未通过">试用期未通过</option>
+					</select>
+				</div>
+				<br>
+				<div class="form-group">
+					<label for="direction">离职去向</label>
+					<input id="direction" type="text" class="form-control">
+				</div>
+				<div class="form-group">
+					<label for="enterTalentPool">是否进入人才库</label>
+					<input id="enterTalentPool" type="text" class="form-control">
+				</div>
+				<div class="form-group">
+					<label for="remarks">备注</label>
+					<input id="remarks" type="text" class="form-control">
+				</div>
+			</form>
+		</div>
+		<script src="resources/plugins/jquery.1.12.4.min.js"></script>
+		<script src="resources/plugins/bootstrap-3.3.0/js/bootstrap.min.js"></script>
+		<script src="resources/plugins/bootstrap-table-1.11.0/bootstrap-table.min.js"></script>
+		<script src="resources/plugins/bootstrap-table-1.11.0/locale/bootstrap-table-zh-CN.min.js"></script>
+		<script src="resources/plugins/waves-0.7.5/waves.min.js"></script>
+		<script src="resources/plugins/jquery-confirm/jquery-confirm.min.js"></script>
+		<script src="resources/plugins/select2/js/select2.min.js"></script>
+
+
+
+		<script src="resources/js/common.js"></script>
+		<script>
+			var $table = $('#table');
+			$(function() {
+				$(document).on('focus', 'input[type="text"]', function() {
+					$(this).parent().find('label').addClass('active');
+				}).on('blur', 'input[type="text"]', function() {
+					if ($(this).val() == '') {
+						$(this).parent().find('label').removeClass('active');
+					}
+				});
+				// bootstrap table初始化
+				// http://bootstrap-table.wenzhixin.net.cn/zh-cn/documentation/
+				$table.bootstrapTable({
+						url: 'resources/data/data2.json',
+						height: getHeight(),
+						striped: true,
+						search: true,
+						searchOnEnterKey: true,
+						showRefresh: true,
+						showToggle: true,
+						showColumns: true,
+						minimumCountColumns: 2,
+						showPaginationSwitch: true,
+						clickToSelect: true,
+						detailView: true,
+						detailFormatter: 'detailFormatter',
+						pagination: true,
+						paginationLoop: false,
+						classes: 'table table-hover table-no-bordered',
+						//sidePagination: 'server',
+						//silentSort: false,
+						smartDisplay: false,
+						idField: 'id',
+						sortName: 'id',
+						sortOrder: 'desc',
+						escape: true,
+						searchOnEnterKey: true,
+						idField: 'systemId',
+						maintainSelected: true,
+						toolbar: '#toolbar',
+						columns: [{
+								field: 'state',
+								checkbox: true
+							},
+							{
+								field: 'departmentid',
+								title: '部门编号',
+								sortable: true,
+								halign: 'center'
+							},
+							{
+								field: 'department',
+								title: '部门名称',
+								sortable: true,
+								halign: 'center'
+							},
+							{
+								field: 'id',
+								title: '员工编号',
+								sortable: true,
+								halign: 'center'
+							},
+							{
+								field: 'name',
+								title: '员工姓名',
+								sortable: true,
+								halign: 'center'
+							},
+							
+						]
+					}).on('all.bs.table', function(e, name, args) {
+						$('[data-toggle="tooltip"]').tooltip();
+						$('[data-toggle="popover"]').popover();
+					});
+				});
+
+			function actionFormatter(value, row, index) {
+				return [
+					'<a class="like" href="javascript:void(0)" data-toggle="tooltip" title="Like"><i class="glyphicon glyphicon-heart"></i></a>　',
+					'<a class="edit ml10" href="javascript:void(0)" data-toggle="tooltip" title="Edit"><i class="glyphicon glyphicon-edit"></i></a>　',
+					'<a class="remove ml10" href="javascript:void(0)" data-toggle="tooltip" title="Remove"><i class="glyphicon glyphicon-remove"></i></a>'
+				].join('');
+			}
+
+			window.actionEvents = {
+				'click .like': function(e, value, row, index) {
+					alert('You click like icon, row: ' + JSON.stringify(row));
+					console.log(value, row, index);
+				},
+				'click .edit': function(e, value, row, index) {
+					alert('You click edit icon, row: ' + JSON.stringify(row));
+					console.log(value, row, index);
+				},
+				'click .remove': function(e, value, row, index) {
+					alert('You click remove icon, row: ' + JSON.stringify(row));
+					console.log(value, row, index);
+				}
+			};
+
+			function detailFormatter(index, row) {
+				var html = [];
+				$.each(row, function(key, value) {
+					html.push('<p><b>' + key + ':</b> ' + value + '</p>');
+				});
+				return html.join('');
+			}
+			// 新增
+			function createAction() {
+				var rows = $table.bootstrapTable('getSelections');
+				if (rows.length !=1) {
+					$.confirm({
+						title: false,
+						content: '请选择一条记录！',
+						autoClose: 'cancel|3000',
+						backgroundDismiss: true,
+						buttons: {
+							cancel: {
+								text: '取消',
+								btnClass: 'waves-effect waves-button'
+							}
+						}
+					});
+				} else {
+					$.confirm({
+						type: 'dark',
+						animationSpeed: 300,
+						title: '员工离职',
+						content: $('#createDialog').html(),
+						buttons: {
+							confirm: {
+								text: '确认',
+								btnClass: 'waves-effect waves-button',
+								action: function() {
+									var result=document.getElementById("remarks").value;
+									if(1)
+									{
+										alert(result);
+										return;
+									}
+									$.alert('确认');
+								}
+							},
+							cancel: {
+								text: '取消',
+								btnClass: 'waves-effect waves-button'
+							}
+						}
+					});
+				}
+			}
+		</script>
+	</body>
+</html>
