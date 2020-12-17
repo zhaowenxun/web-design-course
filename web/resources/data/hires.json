@@ -1,0 +1,116 @@
+[
+    {
+        "id": 1,
+        "username": "开发",
+        "password": "算法工程师",
+        "name": "杜狗",
+        "sex": "女",
+        "age": 20200629,
+        "phone": "专科"
+    },
+    {
+        "id": 2,
+        "username": "管理",
+        "password": "经理",
+        "name": "王二麻子",
+        "sex": "男",
+        "age": 20201129,
+        "phone": "本科"
+
+    },
+	{
+	    "id": 1,
+	    "username": "开发",
+	    "password": "算法工程师",
+	    "name": "杜狗",
+	    "sex": "女",
+	    "age": 20200629,
+	    "phone": "专科"
+	},
+	{
+	    "id": 2,
+	    "username": "管理",
+	    "password": "经理",
+	    "name": "王二麻子",
+	    "sex": "男",
+	    "age": 20201129,
+	    "phone": "本科"
+	
+	},
+	{
+	    "id": 1,
+	    "username": "开发",
+	    "password": "算法工程师",
+	    "name": "杜狗",
+	    "sex": "女",
+	    "age": 20200629,
+	    "phone": "专科"
+	},
+	{
+	    "id": 2,
+	    "username": "管理",
+	    "password": "经理",
+	    "name": "王二麻子",
+	    "sex": "男",
+	    "age": 20201129,
+	    "phone": "本科"
+	
+	},
+	{
+        "id": 1,
+        "username": "开发",
+        "password": "算法工程师",
+        "name": "杜狗",
+        "sex": "女",
+        "age": 20200629,
+        "phone": "专科"
+    },
+    {
+        "id": 2,
+        "username": "管理",
+        "password": "经理",
+        "name": "王二麻子",
+        "sex": "男",
+        "age": 20201129,
+        "phone": "本科"
+
+    },
+	{
+	    "id": 1,
+	    "username": "开发",
+	    "password": "算法工程师",
+	    "name": "杜狗",
+	    "sex": "女",
+	    "age": 20200629,
+	    "phone": "专科"
+	},
+	{
+	    "id": 2,
+	    "username": "管理",
+	    "password": "经理",
+	    "name": "王二麻子",
+	    "sex": "男",
+	    "age": 20201129,
+	    "phone": "本科"
+	
+	},
+	{
+	    "id": 1,
+	    "username": "开发",
+	    "password": "算法工程师",
+	    "name": "杜狗",
+	    "sex": "女",
+	    "age": 20200629,
+	    "phone": "专科"
+	},
+	{
+	    "id": 2,
+	    "username": "管理",
+	    "password": "经理",
+	    "name": "王二麻子",
+	    "sex": "男",
+	    "age": 20201129,
+	    "phone": "本科"
+	
+	}
+]
