@@ -19,7 +19,9 @@
 <body>
 <div id="main">
 	<div id="toolbar">
-
+		<a class="waves-effect waves-button" href="javascript:;" onclick="createAction()"><i class="zmdi zmdi-plus"></i> 新增部门</a>
+		<a class="waves-effect waves-button" href="javascript:;" onclick="updateAction()"><i class="zmdi zmdi-edit"></i> 修改部门</a>
+		<a class="waves-effect waves-button" href="javascript:;" onclick="deleteAction()"><i class="zmdi zmdi-close"></i> 删除部门</a>		
 		<input class="form-control2" style="width:100px"" id="input111" placeholder="部门编号">
 		<input class="form-control2" style="width:100px"" id="input111" placeholder="名称">
 		<input class="form-control2" style="width:100px"" id="input111" placeholder="类型">
@@ -30,9 +32,9 @@
 				<option>部门</option>
 			</select>  
 
-		<a class="waves-effect waves-button" href="javascript:;" onclick="createAction()"><i class="zmdi zmdi-plus"></i> 新增部门</a>
-		<a class="waves-effect waves-button" href="javascript:;" onclick="updateAction()"><i class="zmdi zmdi-edit"></i> 修改部门</a>
-		<a class="waves-effect waves-button" href="javascript:;" onclick="deleteAction()"><i class="zmdi zmdi-close"></i> 删除部门</a>
+			<a class="waves-effect waves-button" href="javascript:;" ><i class="zmdi zmdi-search"></i> 查找</a>
+
+
 	</div>
 	<table id="table"></table>
 </div>
