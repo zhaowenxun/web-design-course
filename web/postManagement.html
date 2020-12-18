@@ -4,7 +4,7 @@
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>部门管理</title>
+	<title>岗位管理</title>
 
 	<link href="resources/plugins/bootstrap-3.3.0/css/bootstrap.min.css" rel="stylesheet"/>
 	<link href="resources/plugins/material-design-iconic-font-2.2.0/css/material-design-iconic-font.min.css" rel="stylesheet"/>
@@ -19,25 +19,30 @@
 <body>
 <div id="main">
 	<div id="toolbar">
-		<a class="waves-effect waves-button" href="javascript:;" onclick="createAction()"><i class="zmdi zmdi-plus"></i> 新增部门</a>
-		<a class="waves-effect waves-button" href="javascript:;" onclick="updateAction()"><i class="zmdi zmdi-edit"></i> 修改部门</a>
-		<a class="waves-effect waves-button" href="javascript:;" onclick="deleteAction()"><i class="zmdi zmdi-close"></i> 删除部门</a>		
-		<input class="form-control2" style="width:100px"" id="input111" placeholder="部门编号">
+		<a class="waves-effect waves-button" href="javascript:;" onclick="createAction()"><i class="zmdi zmdi-plus"></i> 新增岗位</a>
+		<a class="waves-effect waves-button" href="javascript:;" onclick="updateAction()"><i class="zmdi zmdi-edit"></i> 修改岗位</a>
+		<a class="waves-effect waves-button" href="javascript:;" onclick="deleteAction()"><i class="zmdi zmdi-close"></i> 删除岗位</a>
+		<input class="form-control2" style="width:100px"" id="input111" placeholder="岗位编号">
 		<input class="form-control2" style="width:100px"" id="input111" placeholder="名称">
 		<input class="form-control2" style="width:100px"" id="input111" placeholder="类型">
 
 			<select class="form-control2">
 				<option disabled>(请选择岗位类型)</option>
-				<option>公司</option>
-				<option>部门</option>
+				<option>管理</option>
+				<option>技术</option>
+				<option>销售</option>
+				<option>市场</option>
 			</select>  
 
-			<a class="waves-effect waves-button" href="javascript:;" ><i class="zmdi zmdi-search"></i> 查找</a>
-
-
+		<a class="waves-effect waves-button" href="javascript:;" ><i class="zmdi zmdi-search"></i> 查找</a>
 	</div>
 	<table id="table"></table>
 </div>
+
+
+
+
+
 <!-- 新增 -->
 <div id="createDialog" class="crudDialog" hidden>
 	<form>
@@ -50,36 +55,19 @@
 			<input id="input2" type="text" class="form-control">
 		</div>
 		<div class="form-group">
-			<label for="input3">类型</label>
+			<label for="input3">岗位编制</label>
 			<input id="input3" type="text" class="form-control">
 		</div>
-		<div class="form-group">
-			<label for="input4">电话</label>
-			<input id="input4" type="text" class="form-control">
-		</div>
 
-		<div class="form-group">
-			<label for="input5">传真</label>
-			<input id="input5" type="text" class="form-control">
-		</div>
 
-		<div class="form-group">
-			<label for="input6">描述</label>
-			<input id="input6" type="text" class="form-control">
-		</div>
-		<div class="form-group">
-			<label for="input7">上级部门</label>
-			<input id="input7" type="text" class="form-control">
-		</div>
-		<div class="form-group">
-			<label for="input8">成立时间</label>
-			<input id="input8" type="text" class="form-control">
-		</div>
+
 		<div class="form-group">
 			<select class="form-control">
-				<option disabled>(请选择类型)</option>
-				<option>公司</option>
-				<option>部门</option>
+				<option disabled>(请选择岗位类型)</option>
+				<option>管理</option>
+				<option>技术</option>
+				<option>销售</option>
+				<option>市场</option>
 			</select>  
 		</div>
 
@@ -141,13 +129,8 @@ $(function() {
 			{field: 'state', checkbox: true},
 			{field: 'id', title: '编号', sortable: true, halign: 'center'},
 			{field: 'name', title: '名称', sortable: true, halign: 'center'},
-			{field: 'type', title: '类型', sortable: true, halign: 'center'},
-			{field: 'phone', title: '电话', sortable: true, halign: 'center'},
-			{field: 'fax', title: '传真', sortable: true, halign: 'center'},
-			{field: 'description', title: '描述', sortable: true, halign: 'center'},
-			{field: 'super', title: '上级部门', sortable: true, halign: 'center'},
-			{field: 'createTime', title: '成立时间', sortable: true, halign: 'center'},
-			{field: 'action', title: '操作', halign: 'center', align: 'center', formatter: 'actionFormatter', events: 'actionEvents', clickToSelect: false}
+			{field: 'type', title: '岗位类型', sortable: true, halign: 'center'},
+			{field: 'bianzhi', title: '岗位编制', sortable: true, halign: 'center'},
 		]
 	}).on('all.bs.table', function (e, name, args) {
 		$('[data-toggle="tooltip"]').tooltip();
@@ -188,7 +171,7 @@ function createAction() {
 	$.confirm({
 		type: 'dark',
 		animationSpeed: 300,
-		title: '新增部门',
+		title: '新增岗位',
 		content: $('#createDialog').html(),
 		buttons: {
 			confirm: {
