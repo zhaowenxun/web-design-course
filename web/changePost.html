@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>部门调动</title>
+    <title>岗位调动</title>
 
     <link href="resources/plugins/bootstrap-3.3.0/css/bootstrap.min.css" rel="stylesheet"/>
     <link href="resources/plugins/material-design-iconic-font-2.2.0/css/material-design-iconic-font.min.css" rel="stylesheet"/>
@@ -31,7 +31,6 @@
         </div>
         <input type="text" class="form-control3" placeholder="部门编号"  style="width: 120px">
         <input type="text" class="form-control3" placeholder="部门名称"  style="width: 120px">
-        <input type="text" class="form-control3" placeholder="员工编号"  style="width: 120px">
         <input type="text" class="form-control3" placeholder="员工姓名"  style="width: 120px">
         <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="margin-bottom: 5px;">
             <i class="zmdi zmdi-search"></i> 搜索
@@ -58,7 +57,7 @@
 <div id="changeDataDialog" class="crudDialog" hidden>
     <form>
         <div class="form-group">
-            <a style="font-size: 16px;">调入部门：</a><br>
+            <a style="font-size: 16px;">调入岗位：</a><br>
             <select class="form-control2">
                 <option value="programing">开发部</option>
                 <option value="selling">销售部</option>
@@ -69,8 +68,8 @@
             </select><br>
             <a style="font-size: 16px;">调入部门：</a><br>
             <select class="form-control2" style="margin-bottom: 10px">
-                <option value="front-end">主动调动</option>
-                <option value="test">被动调动</option>
+                <option value="front-end">升值</option>
+                <option value="test">降职</option>
                 <option value="test">数据错误</option>
             </select><br>
             <a style="font-size: 16px;">调动时间：</a>
@@ -89,7 +88,7 @@
 <script src="resources/plugins/jquery-confirm/jquery-confirm.min.js"></script>
 <script src="resources/plugins/select2/js/select2.min.js"></script>
 
-<script src="resources/js/changeDepartmnt.js"></script>
+<script src="resources/js/changePost.js"></script>
 <script src="resources/js/common.js"></script>
 <script>
     var $table = $('#table');
@@ -165,7 +164,7 @@
         $.confirm({
             type: 'blue',
             animationSpeed: 300,
-            title: '编辑部门调动信息',
+            title: '编辑岗位调动信息',
             content: $('#changeDataDialog').html(),
             buttons: {
                 confirm: {
