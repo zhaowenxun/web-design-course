@@ -18,6 +18,7 @@
 	</head>
 	<body>
 		<div id="main">
+<<<<<<< Updated upstream
 			<form class="form-inline " style="padding: 1% 0% 0% 1%;" role="form">
 				<div class="form-group ">
 					<input type="text" style="width: 120px;" class="form-control" id="positonName" placeholder="部门编号">
@@ -36,6 +37,16 @@
 					员工离职</a>
 			</form>
 			
+=======
+			<div id="toolbar">
+				<a class="waves-effect waves-button" href="javascript:;" onclick="deleteAction()"><i class="zmdi zmdi-close"></i> 员工离职</a>
+					<input class="form-control2" style="width:100px"" id="input111" placeholder="员工编号">
+					<input class="form-control2" style="width:100px"" id="input111" placeholder="部门名称">
+					<input class="form-control2" style="width:100px"" id="input111" placeholder="员工编号">
+					<input class="form-control2" style="width:100px"" id="input111" placeholder="姓名">
+				<a class="waves-effect waves-button" href="javascript:;" ><i class="zmdi zmdi-search"></i> 查找</a>
+			</div>
+>>>>>>> Stashed changes
 			<table id="table" style="text-align: center;"></table>
 		</div>
 		<!-- 新增 -->
@@ -94,6 +105,7 @@
 				// bootstrap table初始化
 				// http://bootstrap-table.wenzhixin.net.cn/zh-cn/documentation/
 				$table.bootstrapTable({
+<<<<<<< Updated upstream
 					url: 'resources/data/data2.json',
 					height: getHeight(),
 					striped: true,
@@ -154,6 +166,171 @@
 				}).on('all.bs.table', function(e, name, args) {
 					$('[data-toggle="tooltip"]').tooltip();
 					$('[data-toggle="popover"]').popover();
+=======
+						url: 'resources/data/data2.json',
+						height: getHeight(),
+						striped: true,
+						search: true,
+						searchOnEnterKey: true,
+						showRefresh: true,
+						showToggle: true,
+						showColumns: true,
+						minimumCountColumns: 2,
+						showPaginationSwitch: true,
+						clickToSelect: true,
+						detailView: true,
+						detailFormatter: 'detailFormatter',
+						pagination: true,
+						paginationLoop: false,
+						classes: 'table table-hover table-no-bordered',
+						//sidePagination: 'server',
+						//silentSort: false,
+						smartDisplay: false,
+						idField: 'id',
+						sortName: 'id',
+						sortOrder: 'desc',
+						escape: true,
+						searchOnEnterKey: true,
+						idField: 'systemId',
+						maintainSelected: true,
+						toolbar: '#toolbar',
+						columns: [{
+								field: 'state',
+								checkbox: true
+							},
+							{
+								field: 'id',
+								title: '编号',
+								sortable: true,
+								halign: 'center'
+							},
+							{
+								field: 'name',
+								title: '姓名',
+								sortable: true,
+								halign: 'center'
+							},
+							{
+								field: 'sex',
+								title: '性别',
+								sortable: true,
+								halign: 'center'
+							},
+							
+							{
+								field: 'telephoneNumber',
+								title: '联系电话',
+								sortable: true,
+								halign: 'center'
+							},
+							{
+								field: 'idcardNo',
+								title: '身份证号',
+								sortable: true,
+								halign: 'center'
+							},
+							{
+								field: 'email',
+								title: '邮箱',
+								sortable: true,
+								halign: 'center'
+							},
+							{
+								field: 'formOfEmployment',
+								title: '用工类型',
+								sortable: true,
+								halign: 'center'
+							},
+							{
+								field: 'sourceOfStaff',
+								title: '人员来源',
+								sortable: true,
+								halign: 'center'
+							},
+							{
+								field: 'politicCountenance',
+								title: '政治面貌',
+								sortable: true,
+								halign: 'center'
+							},
+							{
+								field: 'nation',
+								title: '民族',
+								sortable: true,
+								halign: 'center'
+							},
+							{
+								field: 'nativePlace',
+								title: '籍贯',
+								sortable: true,
+								halign: 'center'
+							},
+							{
+								field: 'height',
+								title: '身高',
+								sortable: true,
+								halign: 'center'
+							},
+							{
+								field: 'bloodType',
+								title: '血型',
+								sortable: true,
+								halign: 'center'
+							},
+							{
+								field: 'maritalStatus',
+								title: '婚姻状况',
+								sortable: true,
+								halign: 'center'
+							},
+							{
+								field: 'birthPlace',
+								title: '出生地',
+								sortable: true,
+								halign: 'center'
+							},
+							{
+								field: 'Hukou',
+								title: '户口所在地',
+								sortable: true,
+								halign: 'center'
+							},
+							{
+								field: 'highestEducation',
+								title: '最高学历',
+								sortable: true,
+								halign: 'center'
+							},
+							{
+								field: 'highestDegree',
+								title: '最高学位',
+								sortable: true,
+								halign: 'center'
+							},
+							{
+								field: 'universit',
+								title: '毕业院校',
+								sortable: true,
+								halign: 'center'
+							},
+							{
+								field: 'majors',
+								title: '所学专业',
+								sortable: true,
+								halign: 'center'
+							},
+							{
+								field: 'dateOfGraduation',
+								title: '毕业日期',
+								sortable: true,
+								halign: 'center'
+							},
+						]
+					}).on('all.bs.table', function(e, name, args) {
+						$('[data-toggle="tooltip"]').tooltip();
+						$('[data-toggle="popover"]').popover();
+					});
+>>>>>>> Stashed changes
 				});
 			});
 
