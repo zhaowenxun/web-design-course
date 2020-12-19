@@ -4,7 +4,7 @@
 		<meta charset="utf-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<title>部门管理</title>
+		<title>人才库入职</title>
 
 		<link href="resources/plugins/bootstrap-3.3.0/css/bootstrap.min.css" rel="stylesheet" />
 		<link href="resources/plugins/material-design-iconic-font-2.2.0/css/material-design-iconic-font.min.css" rel="stylesheet" />
@@ -18,14 +18,23 @@
 	</head>
 	<body>
 		<div id="main">
-			<div id="toolbar">
-				<a class="waves-effect waves-button" href="javascript:;" onclick="createAction()" style="font-size: 15px;"><i class="zmdi zmdi-plus"></i>
-					员工入职</a>
-			</div>
+			<form class="form-inline " style="padding: 1% 0% 0% 1%;" role="form">
+
+
+				<div class="form-group ">
+					<input type="text" class="form-control" id="positonName" placeholder="姓名">
+				</div>
+				<div class="form-group ">
+					<input type="text" class="form-control" id="positonName" placeholder="身份证号">
+				</div>
+				<button type="submit" class="btn btn-default">查找</button>
+				<a class="btn btn-primary" href="javascript:;" onclick="createAction()" style="font-size: 15px;">员工入职</a>
+			</form>
+
 			<table id="table"></table>
 		</div>
 		<!-- 新增 -->
-		<div id="createDialog" class="crudDialog" hidden >
+		<div id="createDialog" class="crudDialog" hidden>
 			<form>
 				<p>
 					<h4>部门信息录入</h4>
@@ -41,10 +50,7 @@
 						<option value="博士">博士</option>
 						<option value="博士后">博士后</option>
 					</select>
-					<br>
-					<div align="center">
-						<input type="button" name="" id="" value="确定" onclick="checkEmpty2()" />
-					</div>
+
 				</div>
 				<hr>
 				<p>
@@ -65,143 +71,10 @@
 						<input id="timeToWork" type="date" class="form-control">
 					</div>
 					<br>
-					<div align="center">
-						<input type="button" name="" id="" value="确定" onclick="checkEmpty3()" />
-					</div>
 				</div>
-				<hr>
-				<p>
-					<h4>试用期录入</h4>
-				</p>
-				<hr>
-				<div>
-					<div class="form-group">
-						<label for="startDate" class="active">开始日期</label>
-						<input id="startDate" type="date" class="form-control">
-					</div>
-					<div class="form-group">
-						<label for="endDate" class="active">结束日期</label>
-						<input id="endDate" type="date" class="form-control">
-					</div>
-					<br>
-					<div align="center">
-						<input type="button" name="" id="" value="确定" onclick="checkEmpty4()" />
-					</div>
-				</div>
-				<hr>
-				<p>
-					<h4>职业生涯信息录入</h4>
-				</p>
-				<hr>
-				<div>
-					<div class="form-group">
-						<label for="startDate1">起始年月</label>
-						<input id="startDate1" type="text" class="form-control">
-					</div>
-					<div class="form-group">
-						<label for="endDate1">截至年月</label>
-						<input id="endDate1" type="text" class="form-control">
-					</div>
-					<div class="form-group">
-						<label for="unitName">所在单位名称</label>
-						<input id="unitName" type="text" class="form-control">
-					</div>
-					<div class="form-group">
-						<label for="workingContent">从事工作内容</label>
-						<input id="workingContent" type="text" class="form-control">
-					</div>
-					<div class="form-group">
-						<label for="major1">担任职务</label>
-						<input id="major1" type="text" class="form-control">
-					</div>
-					<div class="form-group">
-						<label for="annualSalary">年薪</label>
-						<input id="annualSalary" type="text" class="form-control">
-					</div>
-					<div class="form-group">
-						<label for="witness">证明人</label>
-						<input id="witness" type="text" class="form-control">
-					</div>
-					<div class="form-group">
-						<label for="witnessMajor">证明人职务</label>
-						<input id="witnessMajor" type="text" class="form-control">
-					</div>
-					<div class="form-group">
-						<label for="witnessPhone">证明人电话</label>
-						<input id="witnessPhone" type="text" class="form-control">
-					</div>
-					<div class="form-group">
-						<label for="remarks1">备注</label>
-						<input id="remarks1" type="text" class="form-control">
-					</div>
-					<br>
-					<div align="center">
-						<input type="button" name="" id="" value="确定" onclick="checkEmpty5()" />
-					</div>
-				</div>
-				<hr>
-				<p>
-					<h4>外语能力录入</h4>
-				</p>
-				<hr>
-				<div>
-					<select name="languages" id="languages" class="form-control">
-						<option value="">(请选择语种)</option>
-						<option value="英语">英语</option>
-						<option value="日语">日语</option>
-						<option value="俄语">俄语</option>
-						<option value="法语">法语</option>
-					</select>
-					<hr>
-					<select name="proficiency" id="proficiency" class="form-control">
-						<option value="">(请选择语种熟练程度)</option>
-						<option value="完全不懂">完全不懂</option>
-						<option value="少量,不能进行业务沟通">少量,不能进行业务沟通</option>
-						<option value="有限的业务沟通">有限的业务沟通</option>
-						<option value="一般,业务沟通仍受少量限制">一般,业务沟通仍受少量限制</option>
-						<option value="好,无困难的进行谈判和演讲">好,无困难的进行谈判和演讲</option>
-						<option value="流利,在商务中自由的运用">流利,在商务中自由的运用</option>
-					</select>
-					<br>
-					<div align="center">
-						<input type="button" name="" id="" value="确定" onclick="checkEmpty6()" />
-					</div>
-				</div>
-				<hr>
-				<p>
-					<h4>家庭成员及社会关系</h4>
-				</p>
-				<hr>
-				<div>
-					<select name="kinship" id="kinship" class="form-control">
-						<option value="">(请选择与本人关系)</option>
-						<option value="父亲">父亲</option>
-						<option value="母亲">母亲</option>
-						<option value="配偶">配偶</option>
-					</select>
-					<hr>
-					<div class="form-group">
-						<label for="name1">姓名</label>
-						<input id="name1" type="text" class="form-control">
-					</div>
-					<div class="form-group">
-						<label for="unitName1">所在单位</label>
-						<input id="unitName1" type="text" class="form-control">
-					</div>
-					<div class="form-group">
-						<label for="major2">职务</label>
-						<input id="major2" type="text" class="form-control">
-					</div>
-					<div class="form-group">
-						<label for="phone2">联系电话</label>
-						<input id="phone2" type="text" class="form-control">
-					</div>
-					<br>
-					<div align="center">
-						<input type="button" name="" id="" value="确定" onclick="checkEmpty7()" />
-					</div>
-				</div>
-			</form>
+
+		</div>
+		</form>
 		</div>
 		<script src="resources/plugins/jquery.1.12.4.min.js"></script>
 		<script src="resources/plugins/bootstrap-3.3.0/js/bootstrap.min.js"></script>
@@ -210,9 +83,6 @@
 		<script src="resources/plugins/waves-0.7.5/waves.min.js"></script>
 		<script src="resources/plugins/jquery-confirm/jquery-confirm.min.js"></script>
 		<script src="resources/plugins/select2/js/select2.min.js"></script>
-
-
-
 		<script src="resources/js/common.js"></script>
 		<script>
 			var $table = $('#table');
@@ -227,170 +97,170 @@
 				// bootstrap table初始化
 				// http://bootstrap-table.wenzhixin.net.cn/zh-cn/documentation/
 				$table.bootstrapTable({
-						url: 'resources/data/data2.json',
-						height: getHeight(),
-						striped: true,
-						search: true,
-						searchOnEnterKey: true,
-						showRefresh: true,
-						showToggle: true,
-						showColumns: true,
-						minimumCountColumns: 2,
-						showPaginationSwitch: true,
-						clickToSelect: true,
-						detailView: true,
-						detailFormatter: 'detailFormatter',
-						pagination: true,
-						paginationLoop: false,
-						classes: 'table table-hover table-no-bordered',
-						//sidePagination: 'server',
-						//silentSort: false,
-						smartDisplay: false,
-						idField: 'id',
-						sortName: 'id',
-						sortOrder: 'desc',
-						escape: true,
-						searchOnEnterKey: true,
-						idField: 'systemId',
-						maintainSelected: true,
-						toolbar: '#toolbar',
-						columns: [{
-								field: 'state',
-								checkbox: true
-							},
-							{
-								field: 'id',
-								title: '编号',
-								sortable: true,
-								halign: 'center'
-							},
-							{
-								field: 'name',
-								title: '姓名',
-								sortable: true,
-								halign: 'center'
-							},
-							{
-								field: 'sex',
-								title: '性别',
-								sortable: true,
-								halign: 'center'
-							},
-							
-							{
-								field: 'telephoneNumber',
-								title: '联系电话',
-								sortable: true,
-								halign: 'center'
-							},
-							{
-								field: 'idcardNo',
-								title: '身份证号',
-								sortable: true,
-								halign: 'center'
-							},
-							{
-								field: 'email',
-								title: '邮箱',
-								sortable: true,
-								halign: 'center'
-							},
-							{
-								field: 'formOfEmployment',
-								title: '用工类型',
-								sortable: true,
-								halign: 'center'
-							},
-							{
-								field: 'sourceOfStaff',
-								title: '人员来源',
-								sortable: true,
-								halign: 'center'
-							},
-							{
-								field: 'politicCountenance',
-								title: '政治面貌',
-								sortable: true,
-								halign: 'center'
-							},
-							{
-								field: 'nation',
-								title: '民族',
-								sortable: true,
-								halign: 'center'
-							},
-							{
-								field: 'nativePlace',
-								title: '籍贯',
-								sortable: true,
-								halign: 'center'
-							},
-							{
-								field: 'height',
-								title: '身高',
-								sortable: true,
-								halign: 'center'
-							},
-							{
-								field: 'bloodType',
-								title: '血型',
-								sortable: true,
-								halign: 'center'
-							},
-							{
-								field: 'maritalStatus',
-								title: '婚姻状况',
-								sortable: true,
-								halign: 'center'
-							},
-							{
-								field: 'birthPlace',
-								title: '出生地',
-								sortable: true,
-								halign: 'center'
-							},
-							{
-								field: 'Hukou',
-								title: '户口所在地',
-								sortable: true,
-								halign: 'center'
-							},
-							{
-								field: 'highestEducation',
-								title: '最高学历',
-								sortable: true,
-								halign: 'center'
-							},
-							{
-								field: 'highestDegree',
-								title: '最高学位',
-								sortable: true,
-								halign: 'center'
-							},
-							{
-								field: 'universit',
-								title: '毕业院校',
-								sortable: true,
-								halign: 'center'
-							},
-							{
-								field: 'majors',
-								title: '所学专业',
-								sortable: true,
-								halign: 'center'
-							},
-							{
-								field: 'dateOfGraduation',
-								title: '毕业日期',
-								sortable: true,
-								halign: 'center'
-							},
-						]
-					}).on('all.bs.table', function(e, name, args) {
-						$('[data-toggle="tooltip"]').tooltip();
-						$('[data-toggle="popover"]').popover();
-					});
+					url: 'resources/data/data2.json',
+					height: getHeight(),
+					striped: true,
+					search: false,
+					searchOnEnterKey: false,
+					showRefresh: false,
+					showToggle: false,
+					showColumns: false,
+					minimumCountColumns: 2,
+					showPaginationSwitch: false,
+					clickToSelect: true,
+					detailView: true,
+					detailFormatter: 'detailFormatter',
+					pagination: true,
+					paginationLoop: false,
+					classes: 'table table-hover table-no-bordered',
+					//sidePagination: 'server',
+					//silentSort: false,
+					smartDisplay: false,
+					idField: 'id',
+					sortName: 'id',
+					sortOrder: 'desc',
+					escape: true,
+					searchOnEnterKey: true,
+					idField: 'systemId',
+					maintainSelected: true,
+					toolbar: '#toolbar',
+					columns: [{
+							field: 'state',
+							checkbox: true
+						},
+						{
+							field: 'id',
+							title: '编号',
+							sortable: true,
+							halign: 'center'
+						},
+						{
+							field: 'name',
+							title: '姓名',
+							sortable: true,
+							halign: 'center'
+						},
+						{
+							field: 'sex',
+							title: '性别',
+							sortable: true,
+							halign: 'center'
+						},
+
+						{
+							field: 'telephoneNumber',
+							title: '联系电话',
+							sortable: true,
+							halign: 'center'
+						},
+						{
+							field: 'idcardNo',
+							title: '身份证号',
+							sortable: true,
+							halign: 'center'
+						},
+						{
+							field: 'email',
+							title: '邮箱',
+							sortable: true,
+							halign: 'center'
+						},
+						{
+							field: 'formOfEmployment',
+							title: '用工类型',
+							sortable: true,
+							halign: 'center'
+						},
+						{
+							field: 'sourceOfStaff',
+							title: '人员来源',
+							sortable: true,
+							halign: 'center'
+						},
+						{
+							field: 'politicCountenance',
+							title: '政治面貌',
+							sortable: true,
+							halign: 'center'
+						},
+						{
+							field: 'nation',
+							title: '民族',
+							sortable: true,
+							halign: 'center'
+						},
+						{
+							field: 'nativePlace',
+							title: '籍贯',
+							sortable: true,
+							halign: 'center'
+						},
+						{
+							field: 'height',
+							title: '身高',
+							sortable: true,
+							halign: 'center'
+						},
+						{
+							field: 'bloodType',
+							title: '血型',
+							sortable: true,
+							halign: 'center'
+						},
+						{
+							field: 'maritalStatus',
+							title: '婚姻状况',
+							sortable: true,
+							halign: 'center'
+						},
+						{
+							field: 'birthPlace',
+							title: '出生地',
+							sortable: true,
+							halign: 'center'
+						},
+						{
+							field: 'Hukou',
+							title: '户口所在地',
+							sortable: true,
+							halign: 'center'
+						},
+						{
+							field: 'highestEducation',
+							title: '最高学历',
+							sortable: true,
+							halign: 'center'
+						},
+						{
+							field: 'highestDegree',
+							title: '最高学位',
+							sortable: true,
+							halign: 'center'
+						},
+						{
+							field: 'universit',
+							title: '毕业院校',
+							sortable: true,
+							halign: 'center'
+						},
+						{
+							field: 'majors',
+							title: '所学专业',
+							sortable: true,
+							halign: 'center'
+						},
+						{
+							field: 'dateOfGraduation',
+							title: '毕业日期',
+							sortable: true,
+							halign: 'center'
+						},
+					]
+				}).on('all.bs.table', function(e, name, args) {
+					$('[data-toggle="tooltip"]').tooltip();
+					$('[data-toggle="popover"]').popover();
 				});
+			});
 
 			function actionFormatter(value, row, index) {
 				return [
@@ -425,10 +295,10 @@
 			// 新增
 			function createAction() {
 				var rows = $table.bootstrapTable('getSelections');
-				if (rows.length == 0) {
+				if (rows.length !=1) {
 					$.confirm({
 						title: false,
-						content: '请至少选择一条记录！',
+						content: '请选择一条记录！',
 						autoClose: 'cancel|3000',
 						backgroundDismiss: true,
 						buttons: {
@@ -439,27 +309,9 @@
 						}
 					});
 				} else {
-					$.confirm({
-						
-						type: 'dark',
-						animationSpeed: 300,
-						title: '员工入职',
-						content: $('#createDialog').html(),
-						buttons: {
-							confirm: {
-								text: '确认',
-								btnClass: 'waves-effect waves-button',
-								action: function() {
-									
-								}
-							},
-							cancel: {
-								text: '取消',
-								btnClass: 'waves-effect waves-button'
-							}
-						}
-					});
+					window.location.href = "onboardingManagement3.html";
 				}
+
 			}
 		</script>
 	</body>
