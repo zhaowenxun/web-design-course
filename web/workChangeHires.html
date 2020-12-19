@@ -4,7 +4,7 @@
 		<meta charset="utf-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<title>新聘员工报表</title>
+		<title>岗位调动员工报表</title>
 
 		<link href="resources/plugins/bootstrap-3.3.0/css/bootstrap.min.css" rel="stylesheet" />
 		<link href="resources/plugins/material-design-iconic-font-2.2.0/css/material-design-iconic-font.min.css" rel="stylesheet" />
@@ -18,15 +18,18 @@
 	</head>
 	<body>
 		<div id="main">
-			<div id="toolbar">
-				<input type="date">
-				<input type="date">
-				<a class="waves-effect waves-button" href="javascript:;" ><i class="zmdi zmdi-search"></i> 查找</a>
-
-				<a class="waves-effect waves-button" href="javascript:;" onclick="deleteAction()"><i class="zmdi zmdi-edit"></i>
-					导出数据为excel</a>
-
-			</div>
+			<form class="form-inline " style="padding: 3% 5% 0% 5%;" role="form">
+				<div class="input-group">
+					<span class="input-group-addon">开始时间</span>
+					<input type="date" class="form-control"  id ="beginTime"placeholder="twitterhandle">
+				</div>
+				<div class="input-group">
+					<span class="input-group-addon">结束时间</span>
+					<input type="date" class="form-control" id="endTime" placeholder="twitterhandle">
+				</div>
+				<button type="submit" class="btn btn-default">查找</button>
+				<button type="button" class="btn btn-primary ">导出为EXCEL</button>
+			</form>
 			<!-- 	<div id="toolbar">
  		<a class="waves-effect waves-button" href="javascript:;" onclick="createAction()"><i class="zmdi zmdi-plus"></i> 新增用户</a>
 		<a class="waves-effect waves-button" href="javascript:;" onclick="updateAction()"><i class="zmdi zmdi-edit"></i> 编辑用户</a>
@@ -150,6 +153,17 @@
 					'<a class="remove ml10" href="javascript:void(0)" data-toggle="tooltip" title="Remove"><i class="glyphicon glyphicon-remove"></i></a>'
 				].join('');
 			}
+			$(document).ready(function() {
+				var time = new Date();
+				var day = ("0" + time.getDate()).slice(-2);
+				var month = ("0" + (time.getMonth() + 1)).slice(-2);
+				var today = time.getFullYear() + "-" + (month) + "-" + (day);
+				
+				$('#endTime').val(today);//开始日期的id
+				var nowMonthFirstDay=time.getFullYear() + "-" + (month) + "-" + ("01");
+				$('#beginTime').val(nowMonthFirstDay);//结束日期的id
+				
+			})
 		</script>
 	</body>
 </html>
