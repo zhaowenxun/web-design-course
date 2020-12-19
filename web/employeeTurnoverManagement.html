@@ -4,7 +4,7 @@
 		<meta charset="utf-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<title>部门管理</title>
+		<title>员工离职</title>
 
 		<link href="resources/plugins/bootstrap-3.3.0/css/bootstrap.min.css" rel="stylesheet" />
 		<link href="resources/plugins/material-design-iconic-font-2.2.0/css/material-design-iconic-font.min.css" rel="stylesheet" />
@@ -18,20 +18,34 @@
 	</head>
 	<body>
 		<div id="main">
-			<div id="toolbar">
-				<a class="waves-effect waves-button" href="javascript:;" onclick="createAction()" style="font-size: 15px;"><i class="zmdi zmdi-close"></i>
+			<form class="form-inline " style="padding: 1% 0% 0% 1%;" role="form">
+				<div class="form-group ">
+					<input type="text" style="width: 120px;" class="form-control" id="positonName" placeholder="部门编号">
+				</div>
+				<div class="form-group ">
+					<input type="text" style="width: 120px;" class="form-control" id="positonName" placeholder="部门名称">
+				</div>
+				<div class="form-group ">
+					<input type="text" style="width: 120px;" class="form-control" id="positonName" placeholder="员工编号">
+				</div>
+				<div class="form-group ">
+					<input type="text" style="width: 120px;" class="form-control" id="positonName" placeholder="员工姓名">
+				</div>
+				<button type="submit" class="btn btn-default">查找</button>
+				<a class="btn btn-primary" href="javascript:;" onclick="createAction()" style="font-size: 15px;">
 					员工离职</a>
-			</div>
+			</form>
+			
 			<table id="table" style="text-align: center;"></table>
 		</div>
 		<!-- 新增 -->
 		<div id="createDialog" class="crudDialog" hidden>
 			<form>
 				<div class="form-group">
-					<label for="departureDate">离职日期</label>
-					<input id="departureDate" type="text" class="form-control">
+					<label for="departureDate" class="active">离职日期</label>
+					<input id="departureDate" type="date" class="form-control">
 				</div>
-				<div >
+				<div>
 					<select name="highestDegree" id="highestDegree" class="form-control">
 						<option value="">(请选择离职类型)</option>
 						<option value="主动辞职">主动辞职</option>
@@ -80,68 +94,68 @@
 				// bootstrap table初始化
 				// http://bootstrap-table.wenzhixin.net.cn/zh-cn/documentation/
 				$table.bootstrapTable({
-						url: 'resources/data/data2.json',
-						height: getHeight(),
-						striped: true,
-						search: true,
-						searchOnEnterKey: true,
-						showRefresh: true,
-						showToggle: true,
-						showColumns: true,
-						minimumCountColumns: 2,
-						showPaginationSwitch: true,
-						clickToSelect: true,
-						detailView: true,
-						detailFormatter: 'detailFormatter',
-						pagination: true,
-						paginationLoop: false,
-						classes: 'table table-hover table-no-bordered',
-						//sidePagination: 'server',
-						//silentSort: false,
-						smartDisplay: false,
-						idField: 'id',
-						sortName: 'id',
-						sortOrder: 'desc',
-						escape: true,
-						searchOnEnterKey: true,
-						idField: 'systemId',
-						maintainSelected: true,
-						toolbar: '#toolbar',
-						columns: [{
-								field: 'state',
-								checkbox: true
-							},
-							{
-								field: 'departmentid',
-								title: '部门编号',
-								sortable: true,
-								halign: 'center'
-							},
-							{
-								field: 'department',
-								title: '部门名称',
-								sortable: true,
-								halign: 'center'
-							},
-							{
-								field: 'id',
-								title: '员工编号',
-								sortable: true,
-								halign: 'center'
-							},
-							{
-								field: 'name',
-								title: '员工姓名',
-								sortable: true,
-								halign: 'center'
-							},
-							
-						]
-					}).on('all.bs.table', function(e, name, args) {
-						$('[data-toggle="tooltip"]').tooltip();
-						$('[data-toggle="popover"]').popover();
-					});
+					url: 'resources/data/data2.json',
+					height: getHeight(),
+					striped: true,
+					search: false,
+					searchOnEnterKey: false,
+					showRefresh: false,
+					showToggle: false,
+					showColumns: false,
+					minimumCountColumns: 2,
+					showPaginationSwitch: false,
+					clickToSelect: true,
+					detailView: true,
+					detailFormatter: 'detailFormatter',
+					pagination: true,
+					paginationLoop: false,
+					classes: 'table table-hover table-no-bordered',
+					//sidePagination: 'server',
+					//silentSort: false,
+					smartDisplay: false,
+					idField: 'id',
+					sortName: 'id',
+					sortOrder: 'desc',
+					escape: true,
+					searchOnEnterKey: true,
+					idField: 'systemId',
+					maintainSelected: true,
+					toolbar: '#toolbar',
+					columns: [{
+							field: 'state',
+							checkbox: true
+						},
+						{
+							field: 'departmentid',
+							title: '部门编号',
+							sortable: true,
+							halign: 'center'
+						},
+						{
+							field: 'department',
+							title: '部门名称',
+							sortable: true,
+							halign: 'center'
+						},
+						{
+							field: 'id',
+							title: '员工编号',
+							sortable: true,
+							halign: 'center'
+						},
+						{
+							field: 'name',
+							title: '员工姓名',
+							sortable: true,
+							halign: 'center'
+						},
+
+					]
+				}).on('all.bs.table', function(e, name, args) {
+					$('[data-toggle="tooltip"]').tooltip();
+					$('[data-toggle="popover"]').popover();
 				});
+			});
 
 			function actionFormatter(value, row, index) {
 				return [
@@ -176,10 +190,10 @@
 			// 新增
 			function createAction() {
 				var rows = $table.bootstrapTable('getSelections');
-				if (rows.length !=1) {
+				if (rows.length != 1) {
 					$.confirm({
 						title: false,
-						content: '请选择一条记录！',
+						content: '请一条记录！',
 						autoClose: 'cancel|3000',
 						backgroundDismiss: true,
 						buttons: {
@@ -200,13 +214,7 @@
 								text: '确认',
 								btnClass: 'waves-effect waves-button',
 								action: function() {
-									var result=document.getElementById("remarks").value;
-									if(1)
-									{
-										alert(result);
-										return;
-									}
-									$.alert('确认');
+									
 								}
 							},
 							cancel: {

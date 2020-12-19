@@ -4,7 +4,7 @@
 		<meta charset="utf-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<title>部门管理</title>
+		<title></title>
 
 		<link href="resources/plugins/bootstrap-3.3.0/css/bootstrap.min.css" rel="stylesheet" />
 		<link href="resources/plugins/material-design-iconic-font-2.2.0/css/material-design-iconic-font.min.css" rel="stylesheet" />
@@ -18,15 +18,37 @@
 	</head>
 	<body>
 		<div id="main">
-		<div id="toolbar">
-				<input type="date">
-				<input type="date">
-				<button type="button">查找</button>
-			</div>
+			<form class="form-inline " style="padding: 1% 0% 0% 1%;" role="form">
+				<div class="form-group ">
+					<input type="text" style="width: 120px;" class="form-control" id="positonName" placeholder="员工编号">
+				</div>
+				<div class="form-group ">
+					<input type="text"  style="width: 120px;"class="form-control" id="positonName" placeholder="姓名">
+				</div>
+				<div class="form-group ">
+					<input type="text" style="width: 120px;"class="form-control" id="positonName" placeholder="部门名称">
+				</div>
+				<div class="form-group ">
+					<input type="text"style="width: 120px;" class="form-control" id="positonName" placeholder="岗位名称">
+				</div>
+				<div class="form-group ">
+					<input type="text" style="width: 120px;"class="form-control" id="positonName" placeholder="离职类型">
+				</div>
+				<div class="input-group">
+					<span class="input-group-addon">开始时间</span>
+					<input type="date" style="width: 150px;" class="form-control" placeholder="twitterhandle">
+				</div>
+				<div class="input-group">
+					<span class="input-group-addon">结束时间</span>
+					<input type="date" style="width: 150px;" class="form-control" placeholder="twitterhandle">
+				</div>
+				<button type="submit" class="btn btn-default">查找</button>
+			</form>
+			
 			<table id="table"></table>
 		</div>
 		<!-- 新增 -->
-		
+
 		<script src="resources/plugins/jquery.1.12.4.min.js"></script>
 		<script src="resources/plugins/bootstrap-3.3.0/js/bootstrap.min.js"></script>
 		<script src="resources/plugins/bootstrap-table-1.11.0/bootstrap-table.min.js"></script>
@@ -51,178 +73,177 @@
 				// bootstrap table初始化
 				// http://bootstrap-table.wenzhixin.net.cn/zh-cn/documentation/
 				$table.bootstrapTable({
-						url: 'resources/data/data2.json',
-						height: getHeight(),
-						striped: true,
-						search: true,
-						searchOnEnterKey: true,
-						showRefresh: true,
-						showToggle: true,
-						showColumns: true,
-						minimumCountColumns: 2,
-						showPaginationSwitch: true,
-						clickToSelect: true,
-						detailView: true,
-						detailFormatter: 'detailFormatter',
-						pagination: true,
-						paginationLoop: false,
-						classes: 'table table-hover table-no-bordered',
-						//sidePagination: 'server',
-						//silentSort: false,
-						smartDisplay: false,
-						idField: 'id',
-						sortName: 'id',
-						sortOrder: 'desc',
-						escape: true,
-						searchOnEnterKey: true,
-						idField: 'systemId',
-						maintainSelected: true,
-						toolbar: '#toolbar',
-						columns: [
-							{
-								field: 'departmentid',
-								title: '编号',
-								sortable: true,
-								halign: 'center'
-							},
-							{
-								field: 'name',
-								title: '姓名',
-								sortable: true,
-								halign: 'center'
-							},
-							{
-								field: 'sex',
-								title: '性别',
-								sortable: true,
-								halign: 'center'
-							},
-							{
-								field: 'department',
-								title: '部门',
-								sortable: true,
-								halign: 'center'
-							},
-							{
-								field: 'major',
-								title: '岗位',
-								sortable: true,
-								halign: 'center'
-							},
-							{
-								field: 'telephoneNumber',
-								title: '联系电话',
-								sortable: true,
-								halign: 'center'
-							},
-							{
-								field: 'idcardNo',
-								title: '身份证号',
-								sortable: true,
-								halign: 'center'
-							},
-							{
-								field: 'email',
-								title: '邮箱',
-								sortable: true,
-								halign: 'center'
-							},
-							{
-								field: 'formOfEmployment',
-								title: '用工类型',
-								sortable: true,
-								halign: 'center'
-							},
-							{
-								field: 'sourceOfStaff',
-								title: '人员来源',
-								sortable: true,
-								halign: 'center'
-							},
-							{
-								field: 'politicCountenance',
-								title: '政治面貌',
-								sortable: true,
-								halign: 'center'
-							},
-							{
-								field: 'nation',
-								title: '民族',
-								sortable: true,
-								halign: 'center'
-							},
-							{
-								field: 'nativePlace',
-								title: '籍贯',
-								sortable: true,
-								halign: 'center'
-							},
-							{
-								field: 'height',
-								title: '身高',
-								sortable: true,
-								halign: 'center'
-							},
-							{
-								field: 'bloodType',
-								title: '血型',
-								sortable: true,
-								halign: 'center'
-							},
-							{
-								field: 'maritalStatus',
-								title: '婚姻状况',
-								sortable: true,
-								halign: 'center'
-							},
-							{
-								field: 'birthPlace',
-								title: '出生地',
-								sortable: true,
-								halign: 'center'
-							},
-							{
-								field: 'Hukou',
-								title: '户口所在地',
-								sortable: true,
-								halign: 'center'
-							},
-							{
-								field: 'highestEducation',
-								title: '最高学历',
-								sortable: true,
-								halign: 'center'
-							},
-							{
-								field: 'highestDegree',
-								title: '最高学位',
-								sortable: true,
-								halign: 'center'
-							},
-							{
-								field: 'universit',
-								title: '毕业院校',
-								sortable: true,
-								halign: 'center'
-							},
-							{
-								field: 'majors',
-								title: '所学专业',
-								sortable: true,
-								halign: 'center'
-							},
-							{
-								field: 'dateOfGraduation',
-								title: '毕业日期',
-								sortable: true,
-								halign: 'center'
-							},
-						]
-					}).on('all.bs.table', function(e, name, args) {
-						$('[data-toggle="tooltip"]').tooltip();
-						$('[data-toggle="popover"]').popover();
-					});
+					url: 'resources/data/data2.json',
+					height: getHeight(),
+					striped: true,
+					search: false,
+					searchOnEnterKey:false,
+					showRefresh: false,
+					showToggle: false,
+					showColumns: false,
+					minimumCountColumns: 2,
+					showPaginationSwitch: false,
+					clickToSelect: true,
+					detailView: true,
+					detailFormatter: 'detailFormatter',
+					pagination: true,
+					paginationLoop: false,
+					classes: 'table table-hover table-no-bordered',
+					//sidePagination: 'server',
+					//silentSort: false,
+					smartDisplay: false,
+					idField: 'id',
+					sortName: 'id',
+					sortOrder: 'desc',
+					escape: true,
+					searchOnEnterKey: true,
+					idField: 'systemId',
+					maintainSelected: true,
+					toolbar: '#toolbar',
+					columns: [{
+							field: 'departmentid',
+							title: '编号',
+							sortable: true,
+							halign: 'center'
+						},
+						{
+							field: 'name',
+							title: '姓名',
+							sortable: true,
+							halign: 'center'
+						},
+						{
+							field: 'sex',
+							title: '性别',
+							sortable: true,
+							halign: 'center'
+						},
+						{
+							field: 'department',
+							title: '部门',
+							sortable: true,
+							halign: 'center'
+						},
+						{
+							field: 'major',
+							title: '岗位',
+							sortable: true,
+							halign: 'center'
+						},
+						{
+							field: 'telephoneNumber',
+							title: '联系电话',
+							sortable: true,
+							halign: 'center'
+						},
+						{
+							field: 'idcardNo',
+							title: '身份证号',
+							sortable: true,
+							halign: 'center'
+						},
+						{
+							field: 'email',
+							title: '邮箱',
+							sortable: true,
+							halign: 'center'
+						},
+						{
+							field: 'formOfEmployment',
+							title: '用工类型',
+							sortable: true,
+							halign: 'center'
+						},
+						{
+							field: 'sourceOfStaff',
+							title: '人员来源',
+							sortable: true,
+							halign: 'center'
+						},
+						{
+							field: 'politicCountenance',
+							title: '政治面貌',
+							sortable: true,
+							halign: 'center'
+						},
+						{
+							field: 'nation',
+							title: '民族',
+							sortable: true,
+							halign: 'center'
+						},
+						{
+							field: 'nativePlace',
+							title: '籍贯',
+							sortable: true,
+							halign: 'center'
+						},
+						{
+							field: 'height',
+							title: '身高',
+							sortable: true,
+							halign: 'center'
+						},
+						{
+							field: 'bloodType',
+							title: '血型',
+							sortable: true,
+							halign: 'center'
+						},
+						{
+							field: 'maritalStatus',
+							title: '婚姻状况',
+							sortable: true,
+							halign: 'center'
+						},
+						{
+							field: 'birthPlace',
+							title: '出生地',
+							sortable: true,
+							halign: 'center'
+						},
+						{
+							field: 'Hukou',
+							title: '户口所在地',
+							sortable: true,
+							halign: 'center'
+						},
+						{
+							field: 'highestEducation',
+							title: '最高学历',
+							sortable: true,
+							halign: 'center'
+						},
+						{
+							field: 'highestDegree',
+							title: '最高学位',
+							sortable: true,
+							halign: 'center'
+						},
+						{
+							field: 'universit',
+							title: '毕业院校',
+							sortable: true,
+							halign: 'center'
+						},
+						{
+							field: 'majors',
+							title: '所学专业',
+							sortable: true,
+							halign: 'center'
+						},
+						{
+							field: 'dateOfGraduation',
+							title: '毕业日期',
+							sortable: true,
+							halign: 'center'
+						},
+					]
+				}).on('all.bs.table', function(e, name, args) {
+					$('[data-toggle="tooltip"]').tooltip();
+					$('[data-toggle="popover"]').popover();
 				});
+			});
 
 			function actionFormatter(value, row, index) {
 				return [
@@ -254,8 +275,17 @@
 				});
 				return html.join('');
 			}
+			$(document).ready(function() {
+				var time = new Date();
+				var day = ("0" + time.getDate()).slice(-2);
+				var month = ("0" + (time.getMonth() + 1)).slice(-2);
+				var today = time.getFullYear() + "-" + (month) + "-" + (day);
+				var nowMonthFirstDay = time.getFullYear() + "-" + (month) + "-" + ("01");
 
-			
+				$('#beginTime').val(nowMonthFirstDay); //开始日期的id：beginTime
+				$('#endTime').val(today); //结束日期的id endTime
+
+			})
 		</script>
 	</body>
 </html>

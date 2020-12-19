@@ -4,7 +4,7 @@
 		<meta charset="utf-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<title>普通入职</title>
+		<title>人才库入职</title>
 
 		<link href="resources/plugins/bootstrap-3.3.0/css/bootstrap.min.css" rel="stylesheet" />
 		<link href="resources/plugins/material-design-iconic-font-2.2.0/css/material-design-iconic-font.min.css" rel="stylesheet" />
@@ -22,14 +22,14 @@
 			</p>
 			<hr>
 			<form>
-				<div class="form-group">
-					<label for="name">姓名</label>
-					<input id="name" type="text" class="form-control" value="">
+				<div class="form-group" >
+					<label for="name" class="active">姓名</label>
+					<input id="name" type="text" class="form-control" value="杜茂雨">
 				</div>
 				<div>
 					<select name="sex" id="sex" class="form-control">
 						<option value="">(请选择性别)</option>
-						<option value="男">男</option>
+						<option value="男" selected="selected">男</option>
 						<option value="女">女</option>
 					</select>
 				</div>
@@ -39,8 +39,8 @@
 					<input id="birthDate" type="date" class="form-control">
 				</div>
 				<div class="form-group">
-					<label for="idcardNo">身份证号</label>
-					<input id="idcardNo" type="text" class="form-control">
+					<label for="idcardNo" class="active">身份证号</label>
+					<input id="idcardNo" type="text" class="form-control" value="370826199912195555">
 				</div>
 				<div>
 					<select name="formOfEmployment" id="formOfEmployment" class="form-control">
@@ -134,19 +134,19 @@
 				</div>
 				<hr>
 				<div class="form-group">
-					<label for="nativePlace">籍贯</label>
+					<label for="nativePlace" class="active">籍贯</label>
 					<input id="nativePlace" type="text" class="form-control">
 				</div>
 				<div class="form-group">
-					<label for="telephoneNumber">联系电话</label>
+					<label for="telephoneNumber" class="active">联系电话</label>
 					<input id="telephoneNumber" type="text" class="form-control">
 				</div>
 				<div class="form-group">
-					<label for="mail">电子邮件</label>
+					<label for="mail" class="active">电子邮件</label>
 					<input id="mail" type="text" class="form-control">
 				</div>
 				<div class="form-group">
-					<label for="height">身高</label>
+					<label for="height" class="active">身高</label>
 					<input id="height" type="text" class="form-control">
 				</div>
 				<div>
@@ -172,11 +172,11 @@
 				</div>
 				<hr>
 				<div class="form-group">
-					<label for="birthPlace">出生地</label>
+					<label for="birthPlace" class="active">出生地</label>
 					<input id="birthPlace" type="text" class="form-control">
 				</div>
 				<div class="form-group">
-					<label for="Hukou">户口所在地</label>
+					<label for="Hukou" class="active">户口所在地</label>
 					<input id="Hukou" type="text" class="form-control">
 				</div>
 				<div>
@@ -202,19 +202,19 @@
 				</div>
 				<br>
 				<div class="form-group">
-					<label for="university">毕业院校</label>
+					<label for="university" class="active">毕业院校</label>
 					<input id="university" type="text" class="form-control">
 				</div>
 
 				<div class="form-group">
-					<label for="majors">所学专业</label>
+					<label for="majors" class="active">所学专业</label>
 					<input id="majors" type="text" class="form-control">
 				</div>
 				<div class="form-group">
 					<label for="dateOfGraduation" class="active">毕业日期</label>
 					<input id="dateOfGraduation" type="date" class="form-control">
 				</div>
-			
+				
 				<hr>
 				<p>
 					<h4>部门信息录入</h4>
@@ -250,10 +250,9 @@
 						<label for="timeToWork" class="active">参加工作日期</label>
 						<input id="timeToWork" type="date" class="form-control">
 					</div>
-				
 					
 				</div>
-				
+			
 				<hr>
 				<div align="center">
 					<input type="submit" name="" id="" value="提交" />
