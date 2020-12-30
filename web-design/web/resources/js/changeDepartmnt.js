@@ -1,5 +1,6 @@
 function isDispatched() {
-    document.getElementById('searchCondition').innerHTML = "<form class=\"form-inline \" role=\"form\">\n" +
+    document.getElementById('searchCondition').innerHTML =
+        "<form action=\"${pageContext.request.contextPath }/changeDepartment \" method=\"post\">\n" +
         "        <div class=\"btn-group\">\n" +
         "            <button type=\"button\" class=\"btn btn-primary dropdown-toggle\" data-toggle=\"dropdown\" aria-haspopup=\"true\" aria-expanded=\"false\" style=\"margin-bottom: 5px;\">\n" +
         "                已调度 <span class=\"caret\"></span>\n" +
@@ -21,9 +22,8 @@ function isDispatched() {
         "        <input type=\"text\" class=\"form-control3\" placeholder=\"员工姓名\"  style=\"width: 120px\">\n" +
         "        <input type=\"text\" class=\"form-control3\" placeholder=\"调度方式\"  style=\"width: 120px\">\n" +
         "\n" +
-        "        <button type=\"button\" class=\"btn btn-default dropdown-toggle\" data-toggle=\"dropdown\" aria-haspopup=\"true\" aria-expanded=\"false\" style=\"margin-bottom: 5px;\">\n" +
-        "            <i class=\"zmdi zmdi-search\"></i> 搜索\n" +
-        "        </button>\n" +
+        "        <input type=\"submit\" class=\"btn btn-default dropdown-toggle\" value=\"搜索\" data-toggle=\"dropdown\" aria-haspopup=\"true\" aria-expanded=\"false\" style=\"margin-bottom: 5px;\">\n" +
+        "        </input>\n" +
         "</form>";
 }
 
