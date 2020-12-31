@@ -1,71 +1,95 @@
 package com.staffmanage.entity;
 
 public class Department {
-    private String departmentNumber;
-    private String departmentName;
-    private String departmentType;
-    private String departmentPhone;
-    private String establishData;
-    private String Description;
+    private String dnum;
+    private String dname;
+    private String type;
+    private String phone;
+    private String establishDate;
+    private String des;
+    private String parent;
+    private String fax;
 
-    public Department(String departmentNumber, String departmentName, String departmentType, String departmentPhone, String establishData, String description) {
-        this.departmentNumber = departmentNumber;
-        this.departmentName = departmentName;
-        this.departmentType = departmentType;
-        this.departmentPhone = departmentPhone;
-        this.establishData = establishData;
-        Description = description;
+    public Department(String dnum, String dname, String type, String phone, String establishData, String des, String parent, String fax) {
+        this.dnum = dnum;
+        this.dname = dname;
+        this.type = type;
+        this.phone = phone;
+        this.establishDate = establishDate;
+        this.des = des;
+        this.parent = parent;
+        this.fax = fax;
     }
-
     public Department() {
-
     }
 
-    public String getDepartmentNumber() {
-        return departmentNumber;
+    public String getFax() {
+        return fax;
     }
 
-    public void setDepartmentNumber(String departmentNumber) {
-        this.departmentNumber = departmentNumber;
+    public void setFax(String fax) {
+        this.fax = fax;
     }
 
-    public String getDepartmentName() {
-        return departmentName;
+
+
+
+    public String getDnum() {
+        return dnum;
     }
 
-    public void setDepartmentName(String departmentName) {
-        this.departmentName = departmentName;
+    public void setDnum(String dnum) {
+        this.dnum = dnum;
     }
 
-    public String getDepartmentType() {
-        return departmentType;
+    public String getDname() {
+        return dname;
     }
 
-    public void setDepartmentType(String departmentType) {
-        this.departmentType = departmentType;
+    public void setDname(String dname) {
+        this.dname = dname;
     }
 
-    public String getDepartmentPhone() {
-        return departmentPhone;
+    public String getType() {
+        return type;
     }
 
-    public void setDepartmentPhone(String departmentPhone) {
-        this.departmentPhone = departmentPhone;
+    public void setType(String type) {
+        this.type = type;
     }
 
-    public String getEstablishData() {
-        return establishData;
+    public String getPhone() {
+        return phone;
     }
 
-    public void setEstablishData(String establishData) {
-        this.establishData = establishData;
+    public void setPhone(String phone) {
+        this.phone = phone;
     }
 
-    public String getDescription() {
-        return Description;
+    public String getEstablishDate() {
+        return establishDate;
     }
 
-    public void setDescription(String description) {
-        Description = description;
+    public void setEstablishDate(String establishDate) {
+        this.establishDate = establishDate;
+    }
+
+    public String getDes() {
+        return des;
+    }
+
+    public void setDes(String des) {
+        this.des = des;
+    }
+
+    public String getParent() {
+        return parent;
+    }
+
+    public void setParent(String parent) {
+        this.parent = parent;
     }
 }
+
+
+

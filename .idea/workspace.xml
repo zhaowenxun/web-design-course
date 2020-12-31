@@ -28,28 +28,259 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="797b6cdd-f057-4f1e-84c8-30529a3233bd" name="Default Changelist" comment="servlet化项目">
-      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.name" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/artifacts/Enterprise_software_design_war_exploded.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Java_EE_6_Java_EE_6.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_alibaba_fastjson_1_2_47.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_code_gson_gson_2_8_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_protobuf_protobuf_java_3_6_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_mchange_c3p0_0_9_5_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_mchange_mchange_commons_java_0_2_11.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_dbutils_commons_dbutils_1_6.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__mysql_mysql_connector_java_8_0_20.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/lib.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/web-design-course-main.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/webContexts.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Enterprise_software_design.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web-design/src/com/staffmanage/controller/departmentAdd.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web-design/src/com/staffmanage/controller/departmentController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/artifacts/web_design_war_exploded.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/artifacts/web_design_war_exploded.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sqldialects.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Enterprise_software_design.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Enterprise_software_design.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/web_design_war_exploded/WEB-INF/classes/com/staffmanage/Utils/DbUtils.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/web_design_war_exploded/WEB-INF/classes/com/staffmanage/Utils/DbUtils.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/web_design_war_exploded/WEB-INF/classes/com/staffmanage/controller/departmentChangeController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/web_design_war_exploded/WEB-INF/classes/com/staffmanage/controller/departmentChangeController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/web_design_war_exploded/WEB-INF/classes/com/staffmanage/dao/Imp/departmentDaoImp.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/web_design_war_exploded/WEB-INF/classes/com/staffmanage/dao/Imp/departmentDaoImp.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/web_design_war_exploded/WEB-INF/classes/com/staffmanage/entity/Department.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/web_design_war_exploded/WEB-INF/classes/com/staffmanage/entity/Department.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/web_design_war_exploded/changeDepartment.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/web_design_war_exploded/changeDepartment.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/web_design_war_exploded/departmentManagement.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/web_design_war_exploded/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/web_design_war_exploded/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/web_design_war_exploded/index.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/web-design/com/staffmanage/Utils/DbUtils.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/web-design/com/staffmanage/Utils/DbUtils.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/web-design/com/staffmanage/controller/departmentChangeController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/web-design/com/staffmanage/controller/departmentChangeController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/web-design/com/staffmanage/dao/Imp/departmentDaoImp.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/web-design/com/staffmanage/dao/Imp/departmentDaoImp.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/web-design/com/staffmanage/entity/Department.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/web-design/com/staffmanage/entity/Department.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web-design/src/com/staffmanage/Utils/DbUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/web-design/src/com/staffmanage/Utils/DbUtils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web-design/src/com/staffmanage/controller/departmentChangeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/web-design/src/com/staffmanage/controller/departmentChangeController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web-design/src/com/staffmanage/dao/Imp/departmentDaoImp.java" beforeDir="false" afterPath="$PROJECT_DIR$/web-design/src/com/staffmanage/dao/Imp/departmentDaoImp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web-design/src/com/staffmanage/entity/Department.java" beforeDir="false" afterPath="$PROJECT_DIR$/web-design/src/com/staffmanage/entity/Department.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web-design/web/departmentManagement.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web-design/web/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/web-design/web/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web-design/web/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web-design/web/departmentManagementAdd.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/WEB-INF/sun-jaxws.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/WEB-INF/web.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/changeDepartment.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/changePost.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/crud.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/demo.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/departmentManagement.html" beforeDir="false" afterPath="$PROJECT_DIR$/web-design/web/departmentManagement.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/employeeTurnoverManagement.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/index.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/leavingEmployeeQuery.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/login.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/newHires.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/onboardingManagement1.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/onboardingManagement2.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/onboardingManagement3.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/personalCenter.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/personalReport.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/positionChangeHires.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/postManagement.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/probation.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/resources/css/admin.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/resources/css/common.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/resources/css/form2.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/resources/css/login.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/resources/data/data1.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/resources/data/data2.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/resources/data/data_post.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/resources/data/department_data.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/resources/data/hires.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/resources/data/person.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/resources/data/probation_data.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/resources/images/avatar.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/resources/images/backgroud.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/resources/images/bg.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/resources/images/logo.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/resources/images/logo3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/resources/images/logo_with_title.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/resources/images/zheng-cms-theme-m1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/resources/images/zheng-cms-theme-m2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/resources/images/zheng-cms-theme.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/resources/images/zheng-cms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/resources/images/zheng-oss-theme.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/resources/images/zheng-oss.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/resources/images/zheng-pay-theme.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/resources/images/zheng-pay.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/resources/images/zheng-ucenter-theme.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/resources/images/zheng-ucenter.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/resources/images/zheng-upms-theme.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/resources/images/zheng-upms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/resources/images/zheng-upms2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/resources/images/zsz.psd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/resources/js/admin.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/resources/js/changeDepartmnt.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/resources/js/changePost.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/resources/js/common.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/resources/js/login.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/resources/plugins/BootstrapMenu.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/resources/plugins/My97DatePicker/WdatePicker.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/resources/plugins/My97DatePicker/calendar.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/resources/plugins/My97DatePicker/lang/en.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/resources/plugins/My97DatePicker/lang/zh-cn.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/resources/plugins/My97DatePicker/lang/zh-tw.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/resources/plugins/My97DatePicker/skin/WdatePicker.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/resources/plugins/My97DatePicker/skin/datePicker.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/resources/plugins/My97DatePicker/skin/default/datepicker.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/resources/plugins/My97DatePicker/skin/default/img.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/resources/plugins/My97DatePicker/skin/whyGreen/bg.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/resources/plugins/My97DatePicker/skin/whyGreen/datepicker.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/resources/plugins/My97DatePicker/skin/whyGreen/img.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/resources/plugins/angular/angular-1.5.8/angular-animate.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/resources/plugins/angular/angular-1.5.8/angular-aria.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/resources/plugins/angular/angular-1.5.8/angular-locale_zh-cn.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/resources/plugins/angular/angular-1.5.8/angular-messages.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/resources/plugins/angular/angular-1.5.8/angular.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/resources/plugins/angular/angular-material-1.1.1/angular-material.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/resources/plugins/angular/angular-material-1.1.1/angular-material.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/resources/plugins/awesome-bootstrap-checkbox/awesome-bootstrap-checkbox.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/resources/plugins/awesome-bootstrap-checkbox/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/resources/plugins/bootstrap-3.3.0/css/bootstrap-theme.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/resources/plugins/bootstrap-3.3.0/css/bootstrap-theme.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/resources/plugins/bootstrap-3.3.0/css/bootstrap-theme.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/resources/plugins/bootstrap-3.3.0/css/bootstrap.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/resources/plugins/bootstrap-3.3.0/css/bootstrap.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/resources/plugins/bootstrap-3.3.0/css/bootstrap.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/resources/plugins/bootstrap-3.3.0/fonts/glyphicons-halflings-regular.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/resources/plugins/bootstrap-3.3.0/fonts/glyphicons-halflings-regular.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/resources/plugins/bootstrap-3.3.0/fonts/glyphicons-halflings-regular.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/resources/plugins/bootstrap-3.3.0/fonts/glyphicons-halflings-regular.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/resources/plugins/bootstrap-3.3.0/js/bootstrap.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/resources/plugins/bootstrap-3.3.0/js/bootstrap.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/resources/plugins/bootstrap-3.3.0/js/npm.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/resources/plugins/bootstrap-table-1.11.0/bootstrap-table.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/resources/plugins/bootstrap-table-1.11.0/bootstrap-table.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/resources/plugins/bootstrap-table-1.11.0/locale/bootstrap-table-en-US.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/resources/plugins/bootstrap-table-1.11.0/locale/bootstrap-table-en-US.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/resources/plugins/bootstrap-table-1.11.0/locale/bootstrap-table-zh-CN.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/resources/plugins/bootstrap-table-1.11.0/locale/bootstrap-table-zh-CN.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/resources/plugins/checkbix/css/checkbix.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/resources/plugins/checkbix/css/checkbix.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/resources/plugins/checkbix/js/checkbix.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/resources/plugins/checkbix/js/checkbix.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/resources/plugins/checkbix/js/checkbix.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/resources/plugins/device.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/resources/plugins/fastclick.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/resources/plugins/font-awesome-4.7.0/css/font-awesome.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/resources/plugins/font-awesome-4.7.0/css/font-awesome.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/resources/plugins/font-awesome-4.7.0/fonts/FontAwesome.otf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/resources/plugins/font-awesome-4.7.0/fonts/fontawesome-webfont.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/resources/plugins/font-awesome-4.7.0/fonts/fontawesome-webfont.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/resources/plugins/font-awesome-4.7.0/fonts/fontawesome-webfont.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/resources/plugins/font-awesome-4.7.0/fonts/fontawesome-webfont.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/resources/plugins/font-awesome-4.7.0/fonts/fontawesome-webfont.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/resources/plugins/fullPage/jquery.fullPage.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/resources/plugins/fullPage/jquery.fullPage.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/resources/plugins/fullPage/jquery.fullPage.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/resources/plugins/jquery-confirm/jquery-confirm.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/resources/plugins/jquery-confirm/jquery-confirm.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/resources/plugins/jquery.1.12.4.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/resources/plugins/jquery.cookie.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/resources/plugins/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.concat.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/resources/plugins/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/resources/plugins/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/resources/plugins/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/resources/plugins/malihu-custom-scrollbar-plugin/mCSB_buttons.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/resources/plugins/material-design-iconic-font-2.2.0/css/material-design-iconic-font.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/resources/plugins/material-design-iconic-font-2.2.0/css/material-design-iconic-font.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/resources/plugins/material-design-iconic-font-2.2.0/fonts/Material-Design-Iconic-Font.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/resources/plugins/material-design-iconic-font-2.2.0/fonts/Material-Design-Iconic-Font.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/resources/plugins/material-design-iconic-font-2.2.0/fonts/Material-Design-Iconic-Font.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/resources/plugins/material-design-iconic-font-2.2.0/fonts/Material-Design-Iconic-Font.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/resources/plugins/material-design-iconic-font-2.2.0/fonts/Material-Design-Iconic-Font.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/resources/plugins/select2/css/select2.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/resources/plugins/select2/css/select2.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/resources/plugins/select2/js/i18n/ar.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/resources/plugins/select2/js/i18n/az.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/resources/plugins/select2/js/i18n/bg.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/resources/plugins/select2/js/i18n/ca.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/resources/plugins/select2/js/i18n/cs.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/resources/plugins/select2/js/i18n/da.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/resources/plugins/select2/js/i18n/de.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/resources/plugins/select2/js/i18n/el.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/resources/plugins/select2/js/i18n/en.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/resources/plugins/select2/js/i18n/es.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/resources/plugins/select2/js/i18n/et.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/resources/plugins/select2/js/i18n/eu.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/resources/plugins/select2/js/i18n/fa.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/resources/plugins/select2/js/i18n/fi.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/resources/plugins/select2/js/i18n/fr.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/resources/plugins/select2/js/i18n/gl.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/resources/plugins/select2/js/i18n/he.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/resources/plugins/select2/js/i18n/hi.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/resources/plugins/select2/js/i18n/hr.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/resources/plugins/select2/js/i18n/hu.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/resources/plugins/select2/js/i18n/id.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/resources/plugins/select2/js/i18n/is.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/resources/plugins/select2/js/i18n/it.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/resources/plugins/select2/js/i18n/ja.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/resources/plugins/select2/js/i18n/km.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/resources/plugins/select2/js/i18n/ko.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/resources/plugins/select2/js/i18n/lt.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/resources/plugins/select2/js/i18n/lv.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/resources/plugins/select2/js/i18n/mk.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/resources/plugins/select2/js/i18n/ms.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/resources/plugins/select2/js/i18n/nb.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/resources/plugins/select2/js/i18n/nl.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/resources/plugins/select2/js/i18n/pl.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/resources/plugins/select2/js/i18n/pt-BR.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/resources/plugins/select2/js/i18n/pt.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/resources/plugins/select2/js/i18n/ro.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/resources/plugins/select2/js/i18n/ru.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/resources/plugins/select2/js/i18n/sk.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/resources/plugins/select2/js/i18n/sl.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/resources/plugins/select2/js/i18n/sr-Cyrl.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/resources/plugins/select2/js/i18n/sr.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/resources/plugins/select2/js/i18n/sv.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/resources/plugins/select2/js/i18n/th.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/resources/plugins/select2/js/i18n/tr.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/resources/plugins/select2/js/i18n/uk.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/resources/plugins/select2/js/i18n/vi.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/resources/plugins/select2/js/i18n/zh-CN.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/resources/plugins/select2/js/i18n/zh-TW.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/resources/plugins/select2/js/select2.full.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/resources/plugins/select2/js/select2.full.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/resources/plugins/select2/js/select2.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/resources/plugins/select2/js/select2.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/resources/plugins/select2/theme/select2-bootstrap.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/resources/plugins/select2/theme/select2-bootstrap.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/resources/plugins/waves-0.7.5/waves.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/resources/plugins/waves-0.7.5/waves.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/resources/plugins/waves-0.7.5/waves.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/resources/plugins/waves-0.7.5/waves.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/resources/plugins/waves-0.7.5/waves.min.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/resources/plugins/zTree_v3/css/awesomeStyle/awesome.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/resources/plugins/zTree_v3/css/awesomeStyle/awesome.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/resources/plugins/zTree_v3/css/awesomeStyle/fa.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/resources/plugins/zTree_v3/css/awesomeStyle/img/loading.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/resources/plugins/zTree_v3/css/demo.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/resources/plugins/zTree_v3/css/metroStyle/img/line_conn.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/resources/plugins/zTree_v3/css/metroStyle/img/loading.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/resources/plugins/zTree_v3/css/metroStyle/img/metro.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/resources/plugins/zTree_v3/css/metroStyle/img/metro.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/resources/plugins/zTree_v3/css/metroStyle/metroStyle.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/resources/plugins/zTree_v3/css/zTreeStyle/img/diy/1_close.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/resources/plugins/zTree_v3/css/zTreeStyle/img/diy/1_open.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/resources/plugins/zTree_v3/css/zTreeStyle/img/diy/2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/resources/plugins/zTree_v3/css/zTreeStyle/img/diy/3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/resources/plugins/zTree_v3/css/zTreeStyle/img/diy/4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/resources/plugins/zTree_v3/css/zTreeStyle/img/diy/5.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/resources/plugins/zTree_v3/css/zTreeStyle/img/diy/6.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/resources/plugins/zTree_v3/css/zTreeStyle/img/diy/7.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/resources/plugins/zTree_v3/css/zTreeStyle/img/diy/8.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/resources/plugins/zTree_v3/css/zTreeStyle/img/diy/9.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/resources/plugins/zTree_v3/css/zTreeStyle/img/line_conn.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/resources/plugins/zTree_v3/css/zTreeStyle/img/loading.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/resources/plugins/zTree_v3/css/zTreeStyle/img/zTreeStandard.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/resources/plugins/zTree_v3/css/zTreeStyle/img/zTreeStandard.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/resources/plugins/zTree_v3/css/zTreeStyle/zTreeStyle.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/resources/plugins/zTree_v3/js/jquery.ztree.all.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/resources/plugins/zTree_v3/js/jquery.ztree.core.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/resources/plugins/zTree_v3/js/jquery.ztree.excheck.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/resources/plugins/zTree_v3/js/jquery.ztree.exedit.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/resources/plugins/zTree_v3/js/jquery.ztree.exhide.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/resources/plugins/zheng.autoMail.1.0.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/resources/plugins/zheng.jprogress.0.1.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/separatedHires.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/table.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/workChangeHires.html" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -60,6 +291,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Class" />
+        <option value="Jsp File" />
       </list>
     </option>
   </component>
@@ -85,15 +317,21 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/web-design/src/com/staffmanage/entity/view" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/web-design" />
     <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="duplicates.index" />
   </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\learning\web-course\web-design-course\web-design" />
+      <recent name="D:\learning\web-course\web-design-course\web-design\web" />
+      <recent name="D:\learning\web-course\web-design-course\web-design\src" />
+    </key>
+  </component>
   <component name="RunManager">
     <configuration name="Tomcat 9.0.41" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 9.0.41" ALTERNATIVE_JRE_ENABLED="false">
-      <option name="BROWSER_ID" value="b2a9dca7-9d0b-4e1e-98a8-afb19c1328d2" />
       <deployment>
         <artifact name="web-design:war exploded">
           <settings>
@@ -180,7 +418,7 @@
       </method>
     </configuration>
   </component>
-  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="SpellCheckerSettings" BundledDictionaries="0" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" Dictionaries="0" CorrectionsLimit="5" DefaultDictionary="application-level" UseSingleDictionary="true" />
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -207,6 +445,9 @@
       <workItem from="1609235119572" duration="1139000" />
       <workItem from="1609247300756" duration="3611000" />
       <workItem from="1609251156099" duration="611000" />
+      <workItem from="1609334277244" duration="1106000" />
+      <workItem from="1609335415062" duration="13613000" />
+      <workItem from="1609378203184" duration="7163000" />
     </task>
     <task id="LOCAL-00001" summary="jsp">
       <created>1609124288711</created>
@@ -233,7 +474,7 @@
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="3" />
+    <option name="version" value="2" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
@@ -264,6 +505,92 @@
     <MESSAGE value="数据调入" />
     <MESSAGE value="servlet化项目" />
     <option name="LAST_COMMIT_MESSAGE" value="servlet化项目" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="397" y="13" key="#Project_Structure" timestamp="1609334409379">
+      <screen x="62" y="0" width="1474" height="864" />
+    </state>
+    <state x="397" y="13" key="#Project_Structure/62.0.1474.864@62.0.1474.864" timestamp="1609334409379" />
+    <state x="323" y="265" key="#Template_Data_Languages" timestamp="1609376695310">
+      <screen x="62" y="0" width="1474" height="864" />
+    </state>
+    <state x="323" y="265" key="#Template_Data_Languages/62.0.1474.864@62.0.1474.864" timestamp="1609376695310" />
+    <state x="254" y="87" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1609334621746">
+      <screen x="62" y="0" width="1474" height="864" />
+    </state>
+    <state x="254" y="87" key="#com.intellij.execution.impl.EditConfigurationsDialog/62.0.1474.864@62.0.1474.864" timestamp="1609334621746" />
+    <state width="1005" height="111" key="GridCell.Tab.0.bottom" timestamp="1609385380288">
+      <screen x="62" y="0" width="1474" height="864" />
+    </state>
+    <state width="1005" height="111" key="GridCell.Tab.0.bottom/62.0.1474.864@62.0.1474.864" timestamp="1609385380288" />
+    <state width="1005" height="111" key="GridCell.Tab.0.center" timestamp="1609385380288">
+      <screen x="62" y="0" width="1474" height="864" />
+    </state>
+    <state width="1005" height="111" key="GridCell.Tab.0.center/62.0.1474.864@62.0.1474.864" timestamp="1609385380288" />
+    <state width="1005" height="111" key="GridCell.Tab.0.left" timestamp="1609385380287">
+      <screen x="62" y="0" width="1474" height="864" />
+    </state>
+    <state width="1005" height="111" key="GridCell.Tab.0.left/62.0.1474.864@62.0.1474.864" timestamp="1609385380287" />
+    <state width="1005" height="111" key="GridCell.Tab.0.right" timestamp="1609385380288">
+      <screen x="62" y="0" width="1474" height="864" />
+    </state>
+    <state width="1005" height="111" key="GridCell.Tab.0.right/62.0.1474.864@62.0.1474.864" timestamp="1609385380288" />
+    <state width="1005" height="111" key="GridCell.Tab.1.bottom" timestamp="1609385380292">
+      <screen x="62" y="0" width="1474" height="864" />
+    </state>
+    <state width="1005" height="111" key="GridCell.Tab.1.bottom/62.0.1474.864@62.0.1474.864" timestamp="1609385380292" />
+    <state width="1005" height="111" key="GridCell.Tab.1.center" timestamp="1609385380288">
+      <screen x="62" y="0" width="1474" height="864" />
+    </state>
+    <state width="1005" height="111" key="GridCell.Tab.1.center/62.0.1474.864@62.0.1474.864" timestamp="1609385380288" />
+    <state width="1005" height="111" key="GridCell.Tab.1.left" timestamp="1609385380288">
+      <screen x="62" y="0" width="1474" height="864" />
+    </state>
+    <state width="1005" height="111" key="GridCell.Tab.1.left/62.0.1474.864@62.0.1474.864" timestamp="1609385380288" />
+    <state width="1005" height="111" key="GridCell.Tab.1.right" timestamp="1609385380288">
+      <screen x="62" y="0" width="1474" height="864" />
+    </state>
+    <state width="1005" height="111" key="GridCell.Tab.1.right/62.0.1474.864@62.0.1474.864" timestamp="1609385380288" />
+    <state width="1005" height="111" key="GridCell.Tab.2.bottom" timestamp="1609385380288">
+      <screen x="62" y="0" width="1474" height="864" />
+    </state>
+    <state width="1005" height="111" key="GridCell.Tab.2.bottom/62.0.1474.864@62.0.1474.864" timestamp="1609385380288" />
+    <state width="1005" height="111" key="GridCell.Tab.2.center" timestamp="1609385380288">
+      <screen x="62" y="0" width="1474" height="864" />
+    </state>
+    <state width="1005" height="111" key="GridCell.Tab.2.center/62.0.1474.864@62.0.1474.864" timestamp="1609385380288" />
+    <state width="1005" height="111" key="GridCell.Tab.2.left" timestamp="1609385380288">
+      <screen x="62" y="0" width="1474" height="864" />
+    </state>
+    <state width="1005" height="111" key="GridCell.Tab.2.left/62.0.1474.864@62.0.1474.864" timestamp="1609385380288" />
+    <state width="1005" height="111" key="GridCell.Tab.2.right" timestamp="1609385380288">
+      <screen x="62" y="0" width="1474" height="864" />
+    </state>
+    <state width="1005" height="111" key="GridCell.Tab.2.right/62.0.1474.864@62.0.1474.864" timestamp="1609385380288" />
+    <state width="1007" height="187" key="GridCell.Tab.3.bottom" timestamp="1609338466234">
+      <screen x="62" y="0" width="1474" height="864" />
+    </state>
+    <state width="1007" height="187" key="GridCell.Tab.3.bottom/62.0.1474.864@62.0.1474.864" timestamp="1609338466234" />
+    <state width="1007" height="187" key="GridCell.Tab.3.center" timestamp="1609338466234">
+      <screen x="62" y="0" width="1474" height="864" />
+    </state>
+    <state width="1007" height="187" key="GridCell.Tab.3.center/62.0.1474.864@62.0.1474.864" timestamp="1609338466234" />
+    <state width="1007" height="187" key="GridCell.Tab.3.left" timestamp="1609338466234">
+      <screen x="62" y="0" width="1474" height="864" />
+    </state>
+    <state width="1007" height="187" key="GridCell.Tab.3.left/62.0.1474.864@62.0.1474.864" timestamp="1609338466234" />
+    <state width="1007" height="187" key="GridCell.Tab.3.right" timestamp="1609338466234">
+      <screen x="62" y="0" width="1474" height="864" />
+    </state>
+    <state width="1007" height="187" key="GridCell.Tab.3.right/62.0.1474.864@62.0.1474.864" timestamp="1609338466234" />
+    <state x="456" y="197" key="run.anything.popup" timestamp="1609383517900">
+      <screen x="62" y="0" width="1474" height="864" />
+    </state>
+    <state x="456" y="197" key="run.anything.popup/62.0.1474.864@62.0.1474.864" timestamp="1609383517900" />
+    <state x="710" y="123" width="672" height="678" key="search.everywhere.popup" timestamp="1609383920218">
+      <screen x="62" y="0" width="1474" height="864" />
+    </state>
+    <state x="710" y="123" width="672" height="678" key="search.everywhere.popup/62.0.1474.864@62.0.1474.864" timestamp="1609383920218" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
