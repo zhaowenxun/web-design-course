@@ -20,6 +20,7 @@
 <div id="main" style="margin-top: 10px">
     <!-- 未调职 or 已调职 -->
     <div id="searchCondition">
+        <form action="${pageContext.request.contextPath }/changeDepartment" method="post" id="toolbar">
             <div class="btn-group">
                 <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="margin-bottom: 5px;">
                     未调度 <span class="caret"></span>
@@ -29,11 +30,10 @@
                     <li><a href="javascript:isDispatched()">已调度查询</a></li>
                 </ul>
             </div>
-        <form action="${pageContext.request.contextPath }/changeDepartment" method="post" id="toolbar">
-            <input type="text" class="form-control3" name="did" placeholder="部门编号"  style="width: 120px">
-            <input type="text" class="form-control3" name="dname" placeholder="部门名称"  style="width: 120px">
-            <input type="text" class="form-control3" name="sid" placeholder="员工编号"  style="width: 120px">
-            <input type="text" class="form-control3" name="sname" placeholder="员工姓名"  style="width: 120px">
+            <input type="text" class="form-control3" name="did" id="did" placeholder="部门编号"  style="width: 120px">
+            <input type="text" class="form-control3" name="dname" id="dname" placeholder="部门名称"  style="width: 120px">
+            <input type="text" class="form-control3" name="sid" id="sid" placeholder="员工编号"  style="width: 120px">
+            <input type="text" class="form-control3" name="sname" id="sname" placeholder="员工姓名"  style="width: 120px">
             <input type="submit" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" value="搜索" style="margin-bottom: 5px;">
         </form>
     </div>
@@ -127,8 +127,8 @@
             sortName: 'id',
             sortOrder: 'desc',
             escape: true,
-            searchOnEnterKey: true,
-            idField: 'systemId',
+            //searchOnEnterKey: true,
+            //idField: 'systemId',
             maintainSelected: true,
             toolbar: '#toolbar',
             columns: [
@@ -145,8 +145,11 @@
                 var temp = {
                     limit:params.limit,//页面大小
                     offset:params.offset,//页码
-                    customer:$.trim($('#customer').val()),
-                    paperid:$.trim($('#paperid').val())
+                    did:$.trim($('#did').val()),
+                    dname:$.trim($('#dname').val()),
+                    dname:$.trim($('#dname').val()),
+                    dname:$.trim($('#dname').val()),
+                    dname:$.trim($('#dname').val()),
                 };
             }
         }).on('all.bs.table', function (e, name, args) {

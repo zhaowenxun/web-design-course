@@ -15,8 +15,39 @@ public class departmentDaoImp implements departmentDao {
 
     @Override
     public void addDepartment(Department dep) {
+        Connection conn=null;//建立连接
+        PreparedStatement pstmt=null;//查询
+        //ResultSet rs=null;//查询结果
 
+        try {
+            conn= DbUtils.getConnection();//建立连接
+            System.out.println("conn:"+conn);
+            //String sql="select  *  from department";
+            String sql="insert into department(dnum,dname,type,phone,des,parent,establishDate,fax) values(?,?,?,?,?,?,?,?)";
+            pstmt=conn.prepareStatement(sql);
+
+            pstmt.setString(1,dep.getDnum());
+            pstmt.setString(2,dep.getDname());
+            pstmt.setString(3,dep.getType());
+            pstmt.setString(4,dep.getPhone());
+            pstmt.setString(5,dep.getDes());
+            pstmt.setString(6,dep.getParent());
+            pstmt.setString(7,dep.getEstablishDate());
+            pstmt.setString(8,dep.getFax());
+            pstmt.executeUpdate();
+
+        } catch (SQLException e) {
+            // TODO Auto-generated catch blockD
+            e.printStackTrace();
+        }finally
+        {
+            DbUtils.closeStatement(pstmt);
+            DbUtils.closeConnection();
+        }
     }
+
+
+
 
     @Override
     public void queryDepartment(Department dep) {
@@ -30,10 +61,10 @@ public class departmentDaoImp implements departmentDao {
 
     @Override
     public List<Department> getAllDepartment() {
-        Connection conn=null;
-        PreparedStatement pstmt=null;
-        ResultSet rs=null;
-        List<Department>  deps=new ArrayList<>();
+        Connection conn=null;//建立连接
+        PreparedStatement pstmt=null;//查询
+        ResultSet rs=null;//查询结果
+        List<Department>  deps=new ArrayList<>();//查询结果
 
         try {
             conn= DbUtils.getConnection();
@@ -46,16 +77,18 @@ public class departmentDaoImp implements departmentDao {
             while(rs.next())
             {
                 Department dep=new Department();
-                dep.setDepartmentNumber(rs.getString("dnum"));
-                dep.setDepartmentName(rs.getString("dname"));
-                dep.setDepartmentType(rs.getString("type"));
-                dep.setDepartmentPhone(rs.getString("phone"));
-                dep.setEstablishData(rs.getString("establishDate"));
-                dep.setDescription(rs.getString("des"));
+                dep.setDnum(rs.getString("dnum"));
+                dep.setDname(rs.getString("dname"));
+                dep.setType(rs.getString("type"));
+                dep.setPhone(rs.getString("phone"));
+                dep.setEstablishDate(rs.getString("establishDate"));
+                dep.setDes(rs.getString("des"));
+                dep.setParent(rs.getString("parent"));
+                dep.setFax(rs.getString("fax"));
                 deps.add(dep);
             }
         } catch (SQLException e) {
-            // TODO Auto-generated catch block
+            // TODO Auto-generated catch blockD
             e.printStackTrace();
         }finally
         {

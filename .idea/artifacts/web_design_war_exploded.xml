@@ -7,7 +7,15 @@
         <element id="directory" name="classes">
           <element id="module-output" name="web-design" />
         </element>
+        <element id="directory" name="lib">
+          <element id="library" level="project" name="Maven: com.google.code.gson:gson:2.8.2" />
+          <element id="library" level="project" name="Maven: commons-dbutils:commons-dbutils:1.6" />
+          <element id="library" level="project" name="Java EE 6-Java EE 6" />
+        </element>
       </element>
+      <element id="javaee-facet-resources" facet="web-design/web/Web2" />
+      <element id="javaee-facet-resources" facet="web-design/web/Web3" />
+      <element id="artifact" artifact-name="Enterprise_software_design:war exploded" />
     </root>
   </artifact>
 </component>
