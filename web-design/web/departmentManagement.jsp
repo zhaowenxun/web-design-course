@@ -203,45 +203,45 @@ function Search() {
 			}
 	)
 
-	// var options = $('#createDialog').bootstrapTable('refresh', {
-	// 	query:
-	// 			{
-	// 				Dname:dname,
-	// 				Dnum:dnum
-	// 			}
-	// });
 }
 
 
 // 新增
 function createAction() {
 	window.location = "departmentManagementAdd.jsp";
-	// $.confirm({
-	// 	type: 'dark',
-	// 	animationSpeed: 300,
-	// 	title: '新增部门',
-	// 	content: $('#createDialog').html(),
-	// 	buttons: {
-	//
-	// 		confirm: {
-	// 			text: '确认',
-	// 			btnClass: 'waves-effect waves-button',
-	// 			action: function () {
-	// 				Search();
-	// 				//window.location = "DepartmentAdd";
-	// 				//$.alert('确认');
-	// 			}
-	// 		},
-	// 		cancel: {
-	// 			text: '取消',
-	// 			btnClass: 'waves-effect waves-button'
-	// 		}
-	// 	}
-	// });
 }
+
+function Update() {
+	var rows = $table.bootstrapTable('getSelections');
+	var i=0;
+	var s="";
+	for(i=0;i<rows.length;i++){
+		s=s+rows[i].dnum;
+		s+=','
+	}
+	//rows=rows[0].dname;
+	var a="123"
+	console.log(s);
+	$('#createDialog').bootstrapTable(
+			{
+				method:'get',
+				url:'DepartmentUpdate',
+				queryParams: {
+					abc:s,
+					a:a
+				}
+			}
+	)
+}
+
+
+
 // 编辑
 function updateAction() {
 	var rows = $table.bootstrapTable('getSelections');
+
+
+
 	if (rows.length == 0) {
 		$.confirm({
 			title: false,
@@ -256,25 +256,29 @@ function updateAction() {
 			}
 		});
 	} else {
-		$.confirm({
-			type: 'blue',
-			animationSpeed: 300,
-			title: '编辑系统',
-			content: $('#createDialog').html(),
-			buttons: {
-				confirm: {
-					text: '确认',
-					btnClass: 'waves-effect waves-button',
-					action: function () {
-						$.alert('确认');
-					}
-				},
-				cancel: {
-					text: '取消',
-					btnClass: 'waves-effect waves-button'
-				}
-			}
-		});
+
+		Update();
+
+
+		// $.confirm({
+		// 	type: 'blue',
+		// 	animationSpeed: 300,
+		// 	title: '编辑系统',
+		// 	content: $('#createDialog').html(),
+		// 	buttons: {
+		// 		confirm: {
+		// 			text: '确认',
+		// 			btnClass: 'waves-effect waves-button',
+		// 			action: function () {
+		// 				$.alert('确认');
+		// 			}
+		// 		},
+		// 		cancel: {
+		// 			text: '取消',
+		// 			btnClass: 'waves-effect waves-button'
+		// 		}
+		// 	}
+		// });
 	}
 }
 // 删除

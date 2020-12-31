@@ -105,34 +105,9 @@
             return 0;
         }
         else{
+            console.log(document.getElementById("newForm"))
             document.getElementById("newForm").submit();
-            //$('#createDialog').submit();
-            // var dnum = $('#dnum').val();
-            // var dname = $('#dname').val();
-            // var type = $('#type').val();
-            // var phone = $('#phone').val();
-            // var des = $('#des').val();
-            // var parent = $('#parent').val();
-            // var establishDate = $('#establishDate').val();
-            // var fax = $('#fax').val();
-            // $('#createDialog').bootstrapTable(
-            //     {
-            //         method: 'post',
-            //         url: 'DepartmentAdd',
-            //
-            //         queryParams: {
-            //             dnum:dnum,
-            //             dname: dname,
-            //             type:type,
-            //             phone:phone,
-            //             des:des,
-            //             parent:parent,
-            //             establishDate:establishDate,
-            //             fax:fax
-            //         }
-            //     }
-            // )
-            // window.location.href = "DepartmentAdd";
+     
         }
     }
 
