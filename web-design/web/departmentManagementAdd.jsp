@@ -105,6 +105,7 @@
             return 0;
         }
         else{
+            console.log(document.getElementById("newForm"))
             document.getElementById("newForm").submit();
      
         }
