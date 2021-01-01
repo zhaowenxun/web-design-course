@@ -2719,11 +2719,11 @@ caption {
 	padding-top: 8px;
 	padding-bottom: 8px;
 	color: #777;
-	text-align: left
+	text-align: left;
 }
 
 th {
-	text-align: left
+	text-align: left;
 }
 
 .table {

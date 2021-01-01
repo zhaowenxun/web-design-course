@@ -5,7 +5,7 @@ public class Staff {
 
   private String id;
   private String sex;
-  private java.sql.Date birthDate;
+  private String birthDate;
   private String idcardNo;
   private String formOfEmployment;
   private String sourceOfStaff;
@@ -14,7 +14,7 @@ public class Staff {
   private String nativePlace;
   private String phone;
   private String email;
-  private long height;
+  private int height;
   private String name;
   private String maritalStatus;
   private String birthPlace;
@@ -23,12 +23,13 @@ public class Staff {
   private String highestDegree;
   private String university;
   private String majors;
-  private java.sql.Date dateOfGraduation;
-  private java.sql.Date entryDate;
-  private java.sql.Date workDate;
+  private String dateOfGraduation;
+  private String entryDate;
+  private String workDate;
   private String bloodType;
   private String pid;
   private String did;
+  private String del;
 
 
   public String getId() {
@@ -49,11 +50,11 @@ public class Staff {
   }
 
 
-  public java.sql.Date getBirthDate() {
+  public String getBirthDate() {
     return birthDate;
   }
 
-  public void setBirthDate(java.sql.Date birthDate) {
+  public void setBirthDate(String birthDate) {
     this.birthDate = birthDate;
   }
 
@@ -130,11 +131,11 @@ public class Staff {
   }
 
 
-  public long getHeight() {
+  public int getHeight() {
     return height;
   }
 
-  public void setHeight(long height) {
+  public void setHeight(int height) {
     this.height = height;
   }
 
@@ -211,29 +212,36 @@ public class Staff {
   }
 
 
-  public java.sql.Date getDateOfGraduation() {
+  public String getDateOfGraduation() {
     return dateOfGraduation;
   }
 
-  public void setDateOfGraduation(java.sql.Date dateOfGraduation) {
+  public void setDateOfGraduation(String dateOfGraduation) {
     this.dateOfGraduation = dateOfGraduation;
   }
 
+  public String getDel() {
+    return del;
+  }
 
-  public java.sql.Date getEntryDate() {
+  public void setDel(String del) {
+    this.del = del;
+  }
+
+  public String getEntryDate() {
     return entryDate;
   }
 
-  public void setEntryDate(java.sql.Date entryDate) {
+  public void setEntryDate(String entryDate) {
     this.entryDate = entryDate;
   }
 
 
-  public java.sql.Date getWorkDate() {
+  public String getWorkDate() {
     return workDate;
   }
 
-  public void setWorkDate(java.sql.Date workDate) {
+  public void setWorkDate(String workDate) {
     this.workDate = workDate;
   }
 
@@ -264,4 +272,35 @@ public class Staff {
     this.did = did;
   }
 
+  public Staff() {
+  }
+
+  public Staff(String id, String sex, String birthDate, String idcardNo, String formOfEmployment, String sourceOfStaff, String politicCountenance, String nation, String nativePlace, String phone, String email, int height, String name, String maritalStatus, String birthPlace, String hukou, String highestEducation, String highestDegree, String university, String majors, String dateOfGraduation, String entryDate, String workDate, String bloodType, String pid, String did) {
+    this.id = id;
+    this.sex = sex;
+    this.birthDate = birthDate;
+    this.idcardNo = idcardNo;
+    this.formOfEmployment = formOfEmployment;
+    this.sourceOfStaff = sourceOfStaff;
+    this.politicCountenance = politicCountenance;
+    this.nation = nation;
+    this.nativePlace = nativePlace;
+    this.phone = phone;
+    this.email = email;
+    this.height = height;
+    this.name = name;
+    this.maritalStatus = maritalStatus;
+    this.birthPlace = birthPlace;
+    this.hukou = hukou;
+    this.highestEducation = highestEducation;
+    this.highestDegree = highestDegree;
+    this.university = university;
+    this.majors = majors;
+    this.dateOfGraduation = dateOfGraduation;
+    this.entryDate = entryDate;
+    this.workDate = workDate;
+    this.bloodType = bloodType;
+    this.pid = pid;
+    this.did = did;
+  }
 }

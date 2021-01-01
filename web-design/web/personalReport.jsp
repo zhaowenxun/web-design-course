@@ -1,4 +1,10 @@
+<%@ page import="com.staffmanage.dao.persionalReport" %>
+<%@ page import="java.util.List" %>
+
+
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <!DOCTYPE HTML>
+<%--designer:zhaowenxun--%>
 <html lang="zh-cn">
 	<head>
 		<meta charset="utf-8">
@@ -18,15 +24,10 @@
 	</head>
 	<body>
 		<div id="main">
-			<form class="form-inline " style="padding: 3% 5% 3% 5%;" role="form" method="post"
-				  onsubmit="return Search()">
+			<form method="get" class="form-inline " style="padding: 3% 5% 3% 5%;" role="form">
 				<div class="input-group">
 					<span class="input-group-addon">开始时间</span>
-					<input type="month" class="form-control"  id ="beginTime" placeholder="twitterhandle">
-				</div>
-				<div class="input-group">
-					<span class="input-group-addon">结束时间</span>
-					<input type="month" class="form-control" id="endTime" placeholder="twitterhandle">
+					<input type="month" class="form-control"  name ="beginTime" id ="beginTime" placeholder="twitterhandle">
 				</div>
 				<button type="submit" class="btn btn-default">查找</button>
 				<button type="button" class="btn btn-primary ">导出为EXCEL</button>
@@ -36,7 +37,7 @@
 		<a class="waves-effect waves-button" href="javascript:;" onclick="updateAction()"><i class="zmdi zmdi-edit"></i> 编辑用户</a>
 		<a class="waves-effect waves-button" href="javascript:;" onclick="deleteAction()"><i class="zmdi zmdi-close"></i> 删除用户</a> 
 	</div> -->
-	<table class="table table-striped" style="text-align: center;">
+	<table style="text-align: center;" class="table table-bordered" >
 	  <thead>
 	    <tr>
 	      <th rowspan="2"><h3>部门名称</h3></th>
@@ -56,33 +57,32 @@
 		  <th>高中及以下</th>
 		</tr>
 	  </thead>
-	  <tbody>
-	    <tr>
-	      <td>2</td>
-	      <td>2</td>
-	      <td>2</td>
-	      <td>2</td>
-	      <td>2</td>
-	      <td>2</td>
-	      <td>2</td>
-	      <td>2</td>
-	      <td>2</td>
-	      <td>2</td>
-	      <td>2</td>
-	    </tr>
-		<tr>
-		  <td>2</td>
-		  <td>3</td>
-		  <td>2</td>
-		  <td>1</td>
-		  <td>7</td>
-		  <td>5</td>
-		  <td>2</td>
-		  <td>4</td>
-		  <td>2</td>
-		  <td>7</td>
-		  <td>2</td>
+		<%  List<persionalReport>  pRep=(List<persionalReport>)request.getAttribute("pRep");
+
+			if(pRep==null)
+			{
+
+		%>
+		<tr><td colspan="11"><font color="red">数据加载中请稍等......</font></td></tr>
+		<%}else{
+			for(persionalReport s:pRep)
+			{
+
+		%>
+		<tr >
+			<td><%=s.getDepartment()%></td>
+			<td><%=s.getMonthBeginNum()%></td>
+			<td><%=s.getMonthEndnum()%></td>
+			<td><%=s.getThisMonthIn()%></td>
+			<td><%=s.getThisMonthOut()%></td>
+			<td><%=s.getGetThisMonthChangeIn()%></td>
+			<td><%=s.getGetThisMonthChangeOut()%></td>
+			<td><%=s.getGraduteStudent()%></td>
+			<td><%=s.getUngraduteStudent()%></td>
+			<td><%=s.getJuniorStudent()%></td>
+			<td><%=s.getSeninoHighStudent()%></td>
 		</tr>
+		<%}} %>
 	  </tbody>
 	</table>
 			<!-- <table id="table" style="text-align: center;"></table> -->
@@ -102,36 +102,12 @@
 				var month = ("0" + (time.getMonth() + 1)).slice(-2);
 				var today = time.getFullYear() + "-" + (month) ;
 				var nowMonthFirstDay=time.getFullYear() + "-" + (month);		
-				$('#endTime').val(today);
+				// $('#endTime').val(today);
 				$('#beginTime').val(nowMonthFirstDay);
 				
 			})
 
-            //data转换
-            function getDate(date){
-                var dates = date.split("-");
-                var dateReturn = '';
 
-                for(var i=0; i<dates.length; i++){
-                    dateReturn+=dates[i];
-                }
-                return dateReturn;
-            }
-
-            function checkTime(){
-                var starttime = $('#beginTime').val().trim();
-                var endtime = $('#endTime').val().trim();
-                console.log(getDate(endtime)-getDate(starttime));
-                return getDate(endtime)-getDate(starttime);
-            }
-
-            function Search() {
-                if (checkTime() < 0) {
-                    alert("结束时间不能小于开始时间");
-                }else{
-
-                }
-            }
 		</script>
 	</body>
 </html>

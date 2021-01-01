@@ -18,10 +18,11 @@
 	</head>
 	<body>
 		<div id="main">
-			<form class="form-inline " style="padding: 3% 5% 3% 5%;" role="form">
+			<form class="form-inline " style="padding: 3% 5% 3% 5%;" role="form" method="post"
+				  onsubmit="return Search()">
 				<div class="input-group">
 					<span class="input-group-addon">开始时间</span>
-					<input type="month" class="form-control"  id ="beginTime"placeholder="twitterhandle">
+					<input type="month" class="form-control"  id ="beginTime" placeholder="twitterhandle">
 				</div>
 				<div class="input-group">
 					<span class="input-group-addon">结束时间</span>
@@ -35,7 +36,7 @@
 		<a class="waves-effect waves-button" href="javascript:;" onclick="updateAction()"><i class="zmdi zmdi-edit"></i> 编辑用户</a>
 		<a class="waves-effect waves-button" href="javascript:;" onclick="deleteAction()"><i class="zmdi zmdi-close"></i> 删除用户</a> 
 	</div> -->
-	<table class="table table-bordered" style="text-align: center;">
+	<table class="table table-striped" style="text-align: center;">
 	  <thead>
 	    <tr>
 	      <th rowspan="2"><h3>部门名称</h3></th>
@@ -105,7 +106,32 @@
 				$('#beginTime').val(nowMonthFirstDay);
 				
 			})
-			
+
+            //data转换
+            function getDate(date){
+                var dates = date.split("-");
+                var dateReturn = '';
+
+                for(var i=0; i<dates.length; i++){
+                    dateReturn+=dates[i];
+                }
+                return dateReturn;
+            }
+
+            function checkTime(){
+                var starttime = $('#beginTime').val().trim();
+                var endtime = $('#endTime').val().trim();
+                console.log(getDate(endtime)-getDate(starttime));
+                return getDate(endtime)-getDate(starttime);
+            }
+
+            function Search() {
+                if (checkTime() < 0) {
+                    alert("结束时间不能小于开始时间");
+                }else{
+
+                }
+            }
 		</script>
 	</body>
 </html>
