@@ -11,36 +11,35 @@ import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.List;
 
-public class newHireDaoImpl implements newHiresDao{
+public class separatedHiresDaoImpl implements separatedHiresDao{
     @Override
-    public List<staffxun> getnewHires(String begin, String end ,String option) {
+    public List<staffxun> getSeparatedHires(String begin, String end, String option) {
         if(begin==null){
             Calendar now = Calendar.getInstance();
             begin=""+now.get(Calendar.YEAR)+"-"+String.format("%02d",now.get(Calendar.MONTH) + 1)+"-00";
             end=""+now.get(Calendar.YEAR)+"-"+String.format("%02d",now.get(Calendar.MONTH) + 1)+"-"+String.format("%02d",now.get(Calendar.DAY_OF_MONTH) );
         }
-        Connection  conn=null;
-        PreparedStatement  pstmt=null;
-        ResultSet  rs=null;
-        System.out.println("xinpin Dao "+begin+" "+ end+" "+option);
+        Connection conn=null;
+        PreparedStatement pstmt=null;
+        ResultSet rs=null;
+        System.out.println("lizhi Dao "+begin+" "+ end+" "+option);
         List<staffxun>  xun=new ArrayList<>();
 
         try {
-            conn=DbUtils.getConnection();
+            conn= DbUtils.getConnection();
             System.out.println("conn:"+conn);
-            String sql="select staff.id,dname,post.pname,staff.name,staff.sex,staff.entryDate,staff.highestEducation " +
-                    "FROM staff,department,post " +
-                    "where staff.did=department.dnum and staff.pid=post.pnum and entryDate >= ? and entryDate <= ? ";
-
+            String sql="select staffquit.id,dname,post.pname,staffquit.name,staffquit.sex,staffquit.quitDate,staffquit.type " +
+                    "from staffquit,department,post " +
+                    "where staffquit.did=department.dnum and staffquit.pid=post.pnum and  quitDate>= ? and quitDate <= ? ";
             if(option ==null || option.isEmpty())
             {
-                sql+=" order by staff.id;";
+                sql+=" order by staffquit.id;";
                 pstmt=conn.prepareStatement(sql);
                 pstmt.setString(1, begin);
                 pstmt.setString(2, end);
             }
             else{
-                sql=sql+" and dname= ? order by staff.id";
+                sql=sql+" and dname= ? order by staffquit.id";
                 pstmt=conn.prepareStatement(sql);
                 pstmt.setString(1, begin);
                 pstmt.setString(2, end);
@@ -57,8 +56,8 @@ public class newHireDaoImpl implements newHiresDao{
                 per.setPost(rs.getString("pname"));
                 per.setName(rs.getString("name"));
                 per.setSex(rs.getString("sex"));
-                per.setRdate(rs.getString("entryDate"));
-                per.setXueli(rs.getString("highestEducation"));
+                per.setQdate(rs.getString("quitDate"));
+                per.setDreason(rs.getString("type"));
                 xun.add(per);
             }
         } catch (SQLException e) {
@@ -71,7 +70,5 @@ public class newHireDaoImpl implements newHiresDao{
             DbUtils.closeConnection();
         }
         return  xun;
-
-      //sql 查询要写
     }
 }
